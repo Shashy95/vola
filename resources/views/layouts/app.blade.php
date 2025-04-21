@@ -16,7 +16,6 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <!-- style sheets and font icons -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="{{ asset('css/vendors.min.css') }}"/>
         <link rel="stylesheet" href="{{ asset('css/icon.min.css') }}"/>
         <link rel="stylesheet" href="{{ asset('css/style.css') }}"/>
@@ -166,7 +165,7 @@
 }
 
 /* Adding semi-transparent background to mobile menu for better visibility */
-@media (max-width: 767.98px) {
+@media (max-width: 992px) {
     #navCollapse {
         background-color: rgba(33, 37, 41, 0.95);
         margin: 0 -1rem;
@@ -184,6 +183,15 @@
     #navCollapse .nav-link:focus {
         background-color: rgba(255, 255, 255, 0.1);
     }
+
+    #mainNavbar {
+        background-color: rgba(33, 37, 41, 0.95) !important; /* dark background */
+        backdrop-filter: blur(10px);
+    }
+    .navbar-brand img {
+        filter: brightness(100%);
+    }
+    
 }
 
 /* Make sure navbar appears above other content */
@@ -191,14 +199,17 @@
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Ensure hamburger icon is visible */
-.navbar-toggler {
-    border: 1px solid rgba(255, 255, 255, 0.5);
-}
-
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
+.navbar-overlay {
+    background-color: rgba(33, 37, 41, 0.8); /* Semi-transparent dark */
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+
+
       </style>
       
       
@@ -212,24 +223,12 @@
         
         @include('layouts.footer')
         
-        <!-- start scroll progress -->
-        <div class="scroll-progress d-none d-xxl-block">
-          <a href="#" class="scroll-top" aria-label="scroll">
-            <span class="scroll-text">Scroll</span><span class="scroll-line"><span class="scroll-point"></span></span>
-          </a>
-        </div>
-        <!-- end scroll progress -->
-        <!-- javascript libraries -->
+
         <script type="text/javascript" src="{{ asset('js/jquery.js') }}"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
         <script type="text/javascript" src="{{ asset('js/vendors.min.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
 
         <script>
-          // Add this JavaScript to your home.blade.php file in the @section('scripts') area
-
-      // Add this JavaScript to your home.blade.php file in the @section('scripts') area
-
 document.addEventListener('DOMContentLoaded', function() {
     // Navbar background color change on scroll
     const navbar = document.getElementById('mainNavbar');
@@ -237,18 +236,15 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Function to handle navbar appearance based on scroll position
     function handleScroll() {
-        if (window.scrollY > 50) {
-            // When scrolled, add dark background and keep text visible
-            navbar.classList.remove('bg-transparent');
-            navbar.classList.add('bg-dark');
-            navbar.style.backdropFilter = 'blur(10px)';
-        } else {
-            // At top, reset to transparent
-            navbar.classList.add('bg-transparent');
-            navbar.classList.remove('bg-dark');
-            navbar.style.backdropFilter = 'none';
-        }
+    if (window.scrollY > 50) {
+        navbar.classList.remove('bg-transparent');
+        navbar.classList.add('navbar-overlay');
+    } else {
+        navbar.classList.add('bg-transparent');
+        navbar.classList.remove('navbar-overlay');
     }
+}
+
     
     // Initial call to set proper state
     handleScroll();
@@ -260,16 +256,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const navbarToggler = document.querySelector('.navbar-toggler');
     const navbarCollapse = document.getElementById('navCollapse');
     
-    navbarToggler.addEventListener('click', function() {
-        // Add background color when menu is open (even at top of page)
-        if (!navbarCollapse.classList.contains('show')) {
-            navbar.classList.add('bg-dark');
-        } else if (window.scrollY <= 50) {
-            // Only remove background if we're at the top of the page
-            navbar.classList.remove('bg-dark');
-            navbar.classList.add('bg-transparent');
-        }
-    });
+    navbarToggler.addEventListener('click', function () {
+    if (!navbarCollapse.classList.contains('show')) {
+        navbar.classList.add('navbar-overlay');
+    } else if (window.scrollY <= 50) {
+        navbar.classList.remove('navbar-overlay');
+        navbar.classList.add('bg-transparent');
+    }
+    
+});
+
 });
         </script>
       

@@ -1,4 +1,4 @@
-<nav id="mainNavbar" class="navbar navbar-expand-md fixed-top bg-transparent transition py-3" style="backdrop-filter: none; z-index: 1055;">
+<nav id="mainNavbar" class="navbar navbar-expand-lg fixed-top bg-transparent transition py-3" style="backdrop-filter: none; z-index: 1055;">
     <div class="container">
         <a class="navbar-brand" href="{{ route('home') }}">
             <img src="{{ asset('images/business-logo-white.png') }}" id="logo" alt="Logo" height="50">
