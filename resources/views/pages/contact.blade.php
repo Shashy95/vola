@@ -28,7 +28,7 @@
                 <div class="card h-100 text-center p-4 border-0 shadow-sm">
                     <div class="card-body">
                         <div class="mb-3">
-                            <i class="bi bi-geo-alt text-primary" style="font-size: 2rem;"></i>
+                            <i class="bi bi-geo-alt text-primary"></i>
                         </div>
                         <h5 class="card-title fw-bold">Our Location</h5>
                         <p class="card-text text-muted">123 Film Studio Way<br>Los Angeles, CA 90210</p>
@@ -40,7 +40,7 @@
                 <div class="card h-100 text-center p-4 border-0 shadow-sm">
                     <div class="card-body">
                         <div class="mb-3">
-                            <i class="bi bi-envelope text-primary" style="font-size: 2rem;"></i>
+                            <i class="bi bi-envelope text-primary" ></i>
                         </div>
                         <h5 class="card-title fw-bold">Email Us</h5>
                         <p class="card-text text-muted">info@yourstudio.com<br>projects@yourstudio.com</p>
@@ -52,7 +52,7 @@
                 <div class="card h-100 text-center p-4 border-0 shadow-sm">
                     <div class="card-body">
                         <div class="mb-3">
-                            <i class="bi bi-telephone text-primary" style="font-size: 2rem;"></i>
+                            <i class="bi bi-telephone text-primary"></i>
                         </div>
                         <h5 class="card-title fw-bold">Call Us</h5>
                         <p class="card-text text-muted">(555) 123-4567<br>(555) 765-4321</p>

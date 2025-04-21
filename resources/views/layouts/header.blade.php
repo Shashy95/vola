@@ -1,18 +1,40 @@
-<nav id="mainNavbar" class="navbar navbar-expand-lg fixed-top bg-transparent transition py-3" style="backdrop-filter: none; z-index: 1055;">
-    <div class="container">
-        <a class="navbar-brand" href="{{ route('home') }}">
-            <img src="{{ asset('images/business-logo-white.png') }}" id="logo" alt="Logo" height="50">
-        </a>
-        <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navCollapse">
-            <ul class="navbar-nav ms-auto" id="navLinks">
-                <li class="nav-item"><a class="nav-link text-white" href="{{ route('home') }}">Home</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="{{ route('about') }}">About</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="{{ route('services') }}">Services</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="{{ route('contact') }}">Contact</a></li>
-            </ul>
+<!-- start header -->
+<header> 
+    <!-- start navigation -->
+    <nav class="navbar navbar-expand-lg header-transparent bg-transparent header-reverse" data-header-hover="light">
+        <div class="container-fluid">
+            <div class="col-auto col-xxl-3 col-lg-2 me-lg-0 me-auto">
+                <a class="navbar-brand" href="{{ route('home') }}">
+                    <img src="{{ asset('images/business-logo-white.png') }}"  alt="" class="default-logo">
+                    <img src="{{ asset('images/business-logo-black.png') }}"  alt="" class="alt-logo">
+                    <img src="{{ asset('images/business-logo-black.png') }}"  alt="" class="mobile-logo"> 
+                </a>
+            </div>
+            <div class="col-auto menu-order position-static">
+                <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-line"></span>
+                    <span class="navbar-toggler-line"></span>
+                    <span class="navbar-toggler-line"></span>
+                    <span class="navbar-toggler-line"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav"> 
+                    <ul class="navbar-nav alt-font"> 
+                        <li class="nav-item"><a href="{{ route('home') }}" class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}">Home</a></li>
+                        <li class="nav-item"><a href="{{ route('about') }}" class="nav-link {{ request()->routeIs('about') ? 'active' : '' }}">About</a></li>
+                        <li class="nav-item dropdown dropdown-with-icon-style02">
+                            <a href="{{ route('services') }}" class="nav-link {{ request()->routeIs('services') || request()->routeIs('service-details') ? 'active' : '' }}">Services</a>
+                           
+                        </li>
+                       
+                        <li class="nav-item"><a href="{{ route('contact') }}" class="nav-link {{ request()->routeIs('contact') ? 'active' : '' }}">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-auto col-xxl-3 col-lg-2 text-end d-none d-sm-flex">
+                 
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
+    <!-- end navigation -->
+</header>
+<!-- end header -->

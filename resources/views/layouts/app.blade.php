@@ -80,135 +80,6 @@
               transform: scale(1.05);
               background-color: rgba(255, 255, 255, 0.9) !important;
           }
-          
-          /* Hero content styling */
-          .hero-content {
-              z-index: 2;
-          }
-          
-          /* Section transitions */
-          section {
-              position: relative;
-              overflow: hidden;
-          }
-          
-          /* Enhanced carousel styling */
-          .carousel-item {
-              transition: transform 0.5s ease;
-          }
-          
-          .carousel-item:hover {
-              transform: translateY(-5px);
-          }
-          
-          /* Card enhancements */
-          .card {
-              transition: transform 0.3s ease, box-shadow 0.3s ease;
-              border: none;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-          }
-          
-          .card:hover {
-              transform: translateY(-5px);
-              box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-          }
-          
-          /* Section dividers */
-          .section-divider {
-              height: 3px;
-              width: 50px;
-              background: #007bff;
-              margin: 0 auto 30px;
-          }
-          
-          /* Feature icons enhancement */
-          .feature-icon {
-              width: 60px;
-              height: 60px;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              border-radius: 50%;
-              background-color: rgba(0, 123, 255, 0.1);
-              margin-bottom: 15px;
-              transition: transform 0.3s ease;
-          }
-          
-          .feature-icon:hover {
-              transform: scale(1.1);
-          }
-          
-          .feature-icon i {
-              font-size: 24px;
-              color: #007bff;
-          }
-          
-          /* Button styling */
-          .btn-custom {
-              padding: 10px 25px;
-              border-radius: 30px;
-              font-weight: 500;
-              letter-spacing: 0.5px;
-              transition: all 0.3s ease;
-          }
-          
-          .btn-custom:hover {
-              transform: translateY(-2px);
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-          }
-
-          /* Add this CSS to your stylesheet or in a <style> tag in your head section */
-
-/* Ensure smooth transitions for navbar changes */
-.navbar.transition {
-    transition: all 0.3s ease;
-}
-
-/* Adding semi-transparent background to mobile menu for better visibility */
-@media (max-width: 992px) {
-    #navCollapse {
-        background-color: rgba(33, 37, 41, 0.95);
-        margin: 0 -1rem;
-        padding: 1rem;
-        border-radius: 0 0 8px 8px;
-    }
-    
-    /* Ensuring text is visible in mobile menu */
-    #navCollapse .nav-link {
-        padding: 0.75rem 1rem;
-        border-radius: 4px;
-    }
-    
-    #navCollapse .nav-link:hover, 
-    #navCollapse .nav-link:focus {
-        background-color: rgba(255, 255, 255, 0.1);
-    }
-
-    #mainNavbar {
-        background-color: rgba(33, 37, 41, 0.95) !important; /* dark background */
-        backdrop-filter: blur(10px);
-    }
-    .navbar-brand img {
-        filter: brightness(100%);
-    }
-    
-}
-
-/* Make sure navbar appears above other content */
-.navbar {
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
-.navbar-overlay {
-    background-color: rgba(33, 37, 41, 0.8); /* Semi-transparent dark */
-    backdrop-filter: blur(10px);
-    transition: all 0.3s ease;
-}
-
-
 
       </style>
       
@@ -222,53 +93,18 @@
         @yield('content')
         
         @include('layouts.footer')
+
+          <!-- start scroll progress -->
+          <div class="scroll-progress d-none d-xxl-block">
+            <a href="#" class="scroll-top" aria-label="scroll">
+              <span class="scroll-text">Scroll</span><span class="scroll-line"><span class="scroll-point"></span></span>
+            </a>
+          </div>
         
 
         <script type="text/javascript" src="{{ asset('js/jquery.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/vendors.min.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
-
-        <script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Navbar background color change on scroll
-    const navbar = document.getElementById('mainNavbar');
-    const logo = document.getElementById('logo');
-    
-    // Function to handle navbar appearance based on scroll position
-    function handleScroll() {
-    if (window.scrollY > 50) {
-        navbar.classList.remove('bg-transparent');
-        navbar.classList.add('navbar-overlay');
-    } else {
-        navbar.classList.add('bg-transparent');
-        navbar.classList.remove('navbar-overlay');
-    }
-}
-
-    
-    // Initial call to set proper state
-    handleScroll();
-    
-    // Add scroll event listener
-    window.addEventListener('scroll', handleScroll);
-    
-    // Fix for hamburger menu toggle
-    const navbarToggler = document.querySelector('.navbar-toggler');
-    const navbarCollapse = document.getElementById('navCollapse');
-    
-    navbarToggler.addEventListener('click', function () {
-    if (!navbarCollapse.classList.contains('show')) {
-        navbar.classList.add('navbar-overlay');
-    } else if (window.scrollY <= 50) {
-        navbar.classList.remove('navbar-overlay');
-        navbar.classList.add('bg-transparent');
-    }
-    
-});
-
-});
-        </script>
-      
       
         @yield('scripts')
     </body>
