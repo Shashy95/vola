@@ -1,563 +1,288 @@
 @extends('layouts.app')
 
-@section('content')
-<section class="section-dark p-0 bg-dark-gray"> 
-    <div class="swiper lg-no-parallax magic-cursor  full-screen md-h-600px sm-h-500px ipad-top-space-margin swiper-light-pagination" data-slider-options='{ "slidesPerView": 1, "loop": true, "parallax": true, "speed": 1000, "pagination": { "el": ".swiper-pagination-bullets", "clickable": true }, "navigation": { "nextEl": ".slider-one-slide-next-1", "prevEl": ".slider-one-slide-prev-1" }, "autoplay": { "delay": 4000, "disableOnInteraction": false },  "keyboard": { "enabled": true, "onlyInViewport": true }, "effect": "slide" }'>
-        <div class="swiper-wrapper">
-            <!-- start slider item -->
-            <div class="swiper-slide overflow-hidden">
-                <div class="cover-background position-absolute top-0 start-0 w-100 h-100" data-swiper-parallax="500" style="background-image:url('https://via.placeholder.com/1920x1100');">
-                    <div class="opacity-light bg-gradient-sherpa-blue-black"></div>
-                    <div class="container h-100" data-swiper-parallax="-500">
-                        <div class="row align-items-center h-100">
-                            <div class="col-xl-7 col-lg-8 col-md-10 position-relative text-white text-center text-md-start" data-anime='{ "el": "childs", "translateX": [100, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                                <div>
-                                    <span class="fs-20 opacity-6 mb-25px sm-mb-15px d-inline-block fw-300">Best solutions for your business</span>
-                                </div>
-                                <h1 class="alt-font w-90 xl-w-100 text-shadow-double-large ls-minus-2px">Agency for your <span class="fw-600">great business.</span></h1>
-                                <a href="index.html" target="_blank" class="btn btn-extra-large btn-rounded with-rounded btn-base-color btn-box-shadow box-shadow-extra-large mt-20px sm-mt-0">Get started now<span class="bg-white text-base-color"><i class="fas fa-arrow-right"></i></span></a>
-                            </div>
-                        </div>
-                        <div class="position-absolute bottom-minus-45px" data-anime='{ "translateY": [150, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'><span class="alt-font number text-base-color opacity-3 fs-190 fw-600 ls-minus-5px">01</span></div>
-                    </div>
-                </div>
-            </div>
-            <!-- end slider item -->
-            <!-- start slider item -->
-            <div class="swiper-slide overflow-hidden">
-                <div class="cover-background position-absolute top-0 start-0 w-100 h-100" data-swiper-parallax="500" style="background-image:url('https://via.placeholder.com/1920x1100');">
-                    <div class="opacity-light bg-gradient-sherpa-blue-black"></div>
-                    <div class="container h-100" data-swiper-parallax="-500">
-                        <div class="row align-items-center h-100">
-                            <div class="col-xl-7 col-lg-8 col-md-10 position-relative text-white text-center text-md-start" data-anime='{ "el": "childs", "translateX": [100, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'> 
-                                <div>
-                                    <span class="fs-20 opacity-6 mb-25px sm-mb-15px d-inline-block fw-300">Delivering beautiful digital products</span>
-                                </div>
-                                <h1 class="alt-font w-90 xl-w-100 text-shadow-double-large ls-minus-2px">Shape the future of<span class="fw-600"> marketing.</span></h1> 
-                                <a href="index.html" target="_blank" class="btn btn-extra-large btn-rounded with-rounded btn-base-color btn-box-shadow box-shadow-extra-large mt-20px sm-mt-0">Get started now<span class="bg-white text-base-color"><i class="fa-solid fa-arrow-right"></i></span></a>
-                            </div>
-                            <div class="position-absolute bottom-minus-45px" data-anime='{ "translateY": [150, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'><span class="alt-font number text-base-color opacity-3 fs-190 fw-600 ls-minus-5px">02</span></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- end slider item -->
-            <!-- start slider item -->
-            <div class="swiper-slide overflow-hidden">
-                <div class="cover-background position-absolute top-0 start-0 w-100 h-100" data-swiper-parallax="500" style="background-image:url('https://via.placeholder.com/1920x1100');">
-                    <div class="opacity-light bg-gradient-sherpa-blue-black"></div>
-                    <div class="container h-100" data-swiper-parallax="-500">
-                        <div class="row align-items-center h-100">
-                            <div class="col-xl-7 col-lg-8 col-md-10 position-relative text-white text-center text-md-start" data-anime='{ "el": "childs", "translateX": [100, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                                <div>
-                                    <span class="fs-20 opacity-6 mb-25px sm-mb-15px d-inline-block fw-300">Business strategies and top ideas</span>
-                                </div>
-                                <h1 class="alt-font w-90 xl-w-100 text-shadow-double-large ls-minus-2px">Provide solutions to <span class="fw-600">small business.</span></h1>
-                                <a href="index.html" target="_blank" class="btn btn-extra-large btn-rounded with-rounded btn-base-color btn-box-shadow box-shadow-extra-large mt-20px sm-mt-0">Get started now<span class="bg-white text-base-color"><i class="fa-solid fa-arrow-right"></i></span></a>
-                            </div>
-                            <div class="position-absolute bottom-minus-45px" data-anime='{ "translateY": [150, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'><span class="alt-font number text-base-color opacity-3 fs-190 fw-600 ls-minus-5px">03</span></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- end slider item -->
-        </div>
-        <!-- start slider pagination -->
-        <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"></div>
-        <!-- end slider pagination -->
-        <!-- start slider navigation -->
-        <!--<div class="slider-one-slide-prev-1 icon-extra-large text-white swiper-button-prev slider-navigation-style-06 d-none d-sm-inline-block"><i class="line-icon-Arrow-OutLeft"></i></div>
-            <div class="slider-one-slide-next-1 icon-extra-large text-white swiper-button-next slider-navigation-style-06 d-none d-sm-inline-block"><i class="line-icon-Arrow-OutRight"></i></div>-->
-        <!-- end slider navigation -->
-    </div>
-</section>
-<!-- end section -->
-<!-- start section -->
-<section class="border-bottom border-color-extra-medium-gray pt-40px pb-40px overflow-hidden">
-    <div class="container">
-        <div class="row row-cols-1 row-cols-lg-4 row-cols-sm-2 justify-content-center align-items-center" data-anime='{ "el": "childs", "translateX": [-15, 0], "translateY": [15, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
-            <!-- start features box item -->
-            <div class="col icon-with-text-style-08 md-mb-30px text-center text-sm-start">
-                <div class="feature-box feature-box-left-icon-middle d-inline-flex align-middle">
-                    <div class="feature-box-icon me-10px">
-                        <i class="bi bi-shield-check icon-very-medium text-base-color"></i>
-                    </div>
-                    <div class="feature-box-content">
-                        <span class="alt-font fw-500 text-dark-gray d-block lh-26">World-class services</span>
-                    </div>
-                </div>
-            </div>
-            <!-- end features box item -->
-            <!-- start features box item -->
-            <div class="col icon-with-text-style-08 md-mb-30px text-center text-sm-start">
-                <div class="feature-box feature-box-left-icon-middle d-inline-flex align-middle">
-                    <div class="feature-box-icon me-10px">
-                        <i class="bi bi-hourglass icon-very-medium text-base-color"></i>
-                    </div>
-                    <div class="feature-box-content">
-                        <span class="alt-font fw-500 text-dark-gray d-block lh-26">Experience strategy</span>
-                    </div>
-                </div>
-            </div>
-            <!-- end features box item -->
-            <!-- start features box item -->
-            <div class="col icon-with-text-style-08 xs-mb-30px text-center text-sm-start">
-                <div class="feature-box feature-box-left-icon-middle d-inline-flex align-middle">
-                    <div class="feature-box-icon me-10px">
-                        <i class="bi bi-award icon-very-medium text-base-color"></i>
-                    </div>
-                    <div class="feature-box-content">
-                        <span class="alt-font fw-500 text-dark-gray d-block lh-26">Award winning agency</span>
-                    </div>
-                </div>
-            </div>
-            <!-- end features box item -->
-            <!-- start features box item -->
-            <div class="col icon-with-text-style-08 text-center text-sm-start">
-                <div class="feature-box feature-box-left-icon-middle d-inline-flex align-middle">
-                    <div class="feature-box-icon me-10px">
-                        <i class="bi bi-briefcase icon-very-medium text-base-color"></i>
-                    </div>
-                    <div class="feature-box-content">
-                        <span class="alt-font fw-500 text-dark-gray d-block lh-26">Grow your business</span>
-                    </div>
-                </div>
-            </div>
-            <!-- end features box item -->
-        </div>
-    </div>
-</section>
-<!-- end section -->
-<!-- start section -->
-<section class="pb-8 md-pb-17 xs-pb-28">
-    <div class="container">
-        <div class="row align-items-center justify-content-center">
-            <div class="col-xl-5 col-lg-6 col-md-9 md-mb-50px text-center text-lg-start" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                <span class="bg-solitude-blue text-uppercase fs-13 ps-25px pe-25px alt-font fw-600 text-base-color lh-40 sm-lh-55 border-radius-100px d-inline-block mb-25px">About business</span>
-                <h3 class="alt-font text-dark-gray fw-600 ls-minus-1px mb-20px sm-w-85 xs-w-100 mx-auto">Smart and effective business solutions.</h3>
-                <p>We are excited for our work and how it positively impacts clients. With over 12 years of experience we have been constantly providing excellent solutions.</p>
-                <div class="d-flex flex-row justify-content-center justify-content-lg-start align-items-center mt-35px">
-                    <div class="w-120px me-25px flex-shrink-0">
-                        <div class="chart-percent">
-                            <span class="pie-chart-style-01 d-flex align-items-center justify-content-center text-center" data-line-width="7" data-percent="90" data-size="120" data-track-color="#ededed" data-start-color="#5758D6" data-end-color="#5758D6">
-                                <span class="percent d-flex align-items-center justify-content-center alt-font fs-26 text-dark-gray fw-600 ls-minus-1px"></span>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="text-start">
-                        <span class="fs-20 lh-28 text-dark-gray alt-font fw-500 d-inline-block w-70 xs-w-100">Increased revenue in the <span class="text-decoration-line-bottom-medium fw-600 text-base-color">last 2 years.</span></span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-6 col-lg-6 offset-xl-1 position-relative">
-                <div class="text-end w-80 md-w-75 ms-auto" data-animation-delay="500" data-shadow-animation="true" data-bottom-top="transform: translateY(50px)" data-top-bottom="transform: translateY(-50px)">
-                    <img src="https://via.placeholder.com/750x800" alt="" class="border-radius-5px">
-                </div>
-                <div class="w-60 md-w-50 xs-w-55 overflow-hidden position-absolute left-15px bottom-minus-50px" data-shadow-animation="true" data-animation-delay="500" data-bottom-top="transform: translateY(-50px)" data-top-bottom="transform: translateY(50px)">
-                    <img src="https://via.placeholder.com/638x638" alt="" class="border-radius-5px box-shadow-quadruple-large" />
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- end section -->
-<!-- start section -->
-<section class="bg-solitude-blue">
-    <div class="container">
-        <div class="row justify-content-center mb-4">
-            <div class="col-xl-7 col-lg-9 col-md-10 text-center">
-                <h3 class="alt-font text-dark-gray fw-600 ls-minus-1px" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>Professional and highly dedicated business services</h3>
-            </div>
-        </div>
-        <div class="row align-items-center" data-anime='{ "el": "childs", "translateY": [0, 0], "opacity": [0,1], "duration": 1200, "delay": 150, "staggervalue": 300, "easing": "easeOutQuad" }'>
-            <div class="col-xl-3 col-lg-4 col-md-12 tab-style-05 md-mb-30px sm-mb-20px">
-                <!-- start tab navigation -->
-                <ul class="nav nav-tabs justify-content-center border-0 text-left fw-500 fs-18 alt-font">
-                    <li class="nav-item"><a data-bs-toggle="tab" href="#tab_four1" class="nav-link d-flex align-items-center active"><i class="feather icon-feather-briefcase icon-extra-medium text-dark-gray"></i><span>Business planning</span></a></li>
-                    <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#tab_four2"><i class="feather icon-feather-edit icon-extra-medium text-dark-gray"></i><span>Business research</span></a></li>
-                    <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#tab_four3"><i class="feather icon-feather-compass icon-extra-medium text-dark-gray"></i><span>Tracking operations</span></a></li>
-                    <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#tab_four4"><i class="feather icon-feather-globe icon-extra-medium text-dark-gray"></i><span>Business campaign</span></a></li>
-                </ul>
-                <!-- end tab navigation -->
-            </div>
-            <div class="col-xl-9 col-lg-8 col-md-12">
-                <div class="tab-content">
-                    <!-- start tab content -->
-                    <div class="tab-pane fade in active show" id="tab_four1">
-                        <div class="row align-items-center">
-                            <div class="col-md-6 offset-xl-1 sm-mb-30px">
-                                <img src="https://via.placeholder.com/600x730" alt="" class="border-radius-6px w-100" />
-                            </div>
-                            <div class="col-xl-4 col-md-6 offset-xl-1 text-center text-md-start">
-                                <span class="fs-18 fw-600 text-base-color mb-25px d-flex align-items-center justify-content-center justify-content-md-start"><span class="text-center w-60px h-60px d-flex justify-content-center align-items-center rounded-circle bg-white box-shadow-medium-bottom align-middle me-15px flex-shrink-0"><i class="feather icon-feather-briefcase fs-22"></i></span>Grow and succeed</span>
-                                <h5 class="alt-font text-dark-gray mb-20px fw-500 ls-minus-1px"><span class="fw-600">Work together</span> to make experience</h5>
-                                <p>We always want our client grow with the product we have delivered and maintaining strong long-term good relationship.</p>
-                                <a href="demo-business-services-details.html" class="btn btn-large btn-box-shadow btn-rounded btn-base-color mt-10px">Explore now</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end tab content -->
-                    <!-- start tab content -->
-                    <div class="tab-pane fade in" id="tab_four2">
-                        <div class="row align-items-center">
-                            <div class="col-md-6 offset-xl-1 sm-mb-30px">
-                                <img src="https://via.placeholder.com/600x730" alt="" class="border-radius-6px w-100" />
-                            </div>
-                            <div class="col-xl-4 col-md-6 offset-xl-1 text-center text-md-start">
-                                <span class="fs-18 fw-600 text-base-color mb-25px d-flex align-items-center justify-content-center justify-content-md-start"><span class="text-center w-60px h-60px d-flex justify-content-center align-items-center rounded-circle bg-white box-shadow-medium-bottom align-middle me-15px flex-shrink-0"><i class="feather icon-feather-edit fs-22"></i></span>Identity strategy</span>
-                                <h5 class="alt-font text-dark-gray mb-20px fw-500 ls-minus-1px"><span class="fw-600">Help our clients</span> succeed by brand</h5>
-                                <p>We always want our client grow with the product we have delivered and maintaining strong long-term good relationship.</p>
-                                <a href="demo-business-services-details.html" class="btn btn-large btn-box-shadow btn-rounded btn-base-color mt-10px">Explore now</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end tab content -->
-                    <!-- start tab content -->
-                    <div class="tab-pane fade in" id="tab_four3">
-                        <div class="row align-items-center">
-                            <div class="col-md-6 offset-xl-1 sm-mb-30px">
-                                <img src="https://via.placeholder.com/600x730" alt="" class="border-radius-6px w-100" />
-                            </div>
-                            <div class="col-xl-4 col-md-6 offset-xl-1 text-center text-md-start">
-                                <span class="fs-18 fw-600 text-base-color mb-25px d-flex align-items-center justify-content-center justify-content-md-start"><span class="text-center w-60px h-60px d-flex justify-content-center align-items-center rounded-circle bg-white box-shadow-medium-bottom align-middle me-15px flex-shrink-0"><i class="feather icon-feather-compass fs-22"></i></span>Grow and succeed</span>
-                                <h5 class="alt-font text-dark-gray mb-20px fw-500 ls-minus-1px"><span class="fw-600">Work together</span> to make experience.</h5>
-                                <p>We always want our client grow with the product we have delivered and maintaining strong long-term good relationship.</p>
-                                <a href="demo-business-services-details.html" class="btn btn-large btn-box-shadow btn-rounded btn-base-color mt-10px">Explore now</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end tab content -->
-                    <!-- start tab content -->
-                    <div class="tab-pane fade in" id="tab_four4">
-                        <div class="row align-items-center">
-                            <div class="col-md-6 offset-xl-1 sm-mb-30px">
-                                <img src="https://via.placeholder.com/600x730" alt="" class="border-radius-6px w-100" />
-                            </div>
-                            <div class="col-xl-4 col-md-6 offset-xl-1 text-center text-md-start">
-                                <span class="fs-18 fw-600 text-base-color mb-25px d-flex align-items-center justify-content-center justify-content-md-start"><span class="text-center w-60px h-60px d-flex justify-content-center align-items-center rounded-circle bg-white box-shadow-medium-bottom align-middle me-15px flex-shrink-0"><i class="feather icon-feather-globe fs-22"></i></span>Experience strategy</span>
-                                <h5 class="alt-font text-dark-gray mb-20px fw-500 ls-minus-1px"><span class="fw-600">Help our clients</span> succeed by brand</h5>
-                                <p>We always want our client grow with the product we have delivered and maintaining strong long-term good relationship.</p>
-                                <a href="demo-business-services-details.html" class="btn btn-large btn-box-shadow btn-rounded btn-base-color mt-10px">Explore now</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end tab content -->
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- end section -->
-<!-- start section -->
-<section class="pb-0">
-    <div class="container">
-        <div class="row align-items-center justify-content-center">                    
-            <div class="col-xl-5 col-lg-6 md-mb-50px text-center text-lg-start" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                <span class="bg-solitude-blue text-uppercase fs-13 ps-25px pe-25px alt-font fw-600 text-base-color lh-40 sm-lh-55 border-radius-100px d-inline-block mb-25px">Flexible pricing</span>
-                <h3 class="alt-font text-dark-gray fw-600 ls-minus-1px">Tailored pricing plans for everyone.</h3>
-                <p>We are excited for our work and how it positively impacts clients. With over 12 years of experience we have been constantly providing excellent solutions.</p>
-                <a href="demo-business-pricing.html" class="btn btn-large btn-box-shadow btn-rounded btn-dark-gray mt-10px">View all plans</a>
-            </div>
-            <div class="col-xl-5 col-lg-6 offset-xl-2 position-relative">
-                <div class="accordion pricing-table-style-04" id="accordion-style-01" data-active-icon="fa-angle-up" data-inactive-icon="fa-angle-down" data-anime='{"el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                    <!-- start accordion item -->
-                    <div class="accordion-item bg-white active-accordion box-shadow-quadruple-large mb-20px">
-                        <div class="accordion-header">
-                            <a href="#" data-bs-toggle="collapse" data-bs-target="#accordion-style-01-01" aria-expanded="true" data-bs-parent="#accordion-style-01"> 
-                                <div class="accordion-title position-relative d-flex align-items-center pe-20px text-dark-gray fw-500 mb-0 alt-font">Basic plan<span class="icon-round bg-dark-gray text-white w-25px h-25px"><i class="fa-solid fa-angle-up"></i></span></div>
-                            </a>
-                        </div>
-                        <div id="accordion-style-01-01" class="accordion-collapse collapse show" data-bs-parent="#accordion-style-01">
-                            <div class="accordion-body last-paragraph-no-margin">
-                                <p class="opacity-6 w-90 fw-300">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod.</p>
-                                <div class="d-flex align-items-end mt-20px">
-                                    <h5 class="text-white mb-0 ls-minus-1px"><span class="fs-16">$</span>19.99 <span class="fs-16 opacity-6 fw-300 ls-0px">/ Monthly</span></h5>
-                                    <a href="demo-business-pricing.html" class="btn btn-transparent-white-light btn-rounded btn-small ms-auto fw-500 btn-box-shadow">Get started</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end accordion item -->
-                    <!-- start accordion item -->
-                    <div class="accordion-item bg-white box-shadow-quadruple-large mb-20px">
-                        <div class="accordion-header">
-                            <a href="#" data-bs-toggle="collapse" data-bs-target="#accordion-style-01-02" aria-expanded="false" data-bs-parent="#accordion-style-01">
-                                <div class="accordion-title position-relative d-flex align-items-center pe-20px text-dark-gray fw-500 mb-0 alt-font">Standard plan<span class="icon-round bg-dark-gray text-white w-25px h-25px"><i class="fa-solid fa-angle-down"></i></span></div>
-                            </a>
-                        </div>
-                        <div id="accordion-style-01-02" class="accordion-collapse collapse" data-bs-parent="#accordion-style-01">
-                            <div class="accordion-body last-paragraph-no-margin">
-                                <p class="opacity-6 w-90 fw-300">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod.</p>
-                                <div class="d-flex align-items-end mt-20px">
-                                    <h5 class="text-white mb-0 ls-minus-1px"><span class="fs-16">$</span>29.99 <span class="fs-16 opacity-6 fw-300 ls-0px">/ Monthly</span></h5>
-                                    <a href="demo-business-pricing.html" class="btn btn-transparent-white-light btn-rounded btn-small ms-auto fw-500 btn-box-shadow">Get started</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end accordion item -->
-                    <!-- start accordion item -->
-                    <div class="accordion-item bg-white box-shadow-quadruple-large">
-                        <div class="accordion-header">
-                            <a href="#" data-bs-toggle="collapse" data-bs-target="#accordion-style-01-03" aria-expanded="false" data-bs-parent="#accordion-style-01">
-                                <div class="accordion-title position-relative d-flex align-items-center pe-20px text-dark-gray fw-500 mb-0 alt-font">Premium plan<span class="icon-round bg-dark-gray text-white w-25px h-25px"><i class="fa-solid fa-angle-down"></i></span></div>
-                            </a>
-                        </div>
-                        <div id="accordion-style-01-03" class="accordion-collapse collapse" data-bs-parent="#accordion-style-01">
-                            <div class="accordion-body last-paragraph-no-margin">
-                                <p class="opacity-6 w-90 fw-300">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod.</p>
-                                <div class="d-flex align-items-end mt-20px">
-                                    <h5 class="text-white mb-0 ls-minus-1px"><span class="fs-16">$</span>39.99 <span class="fs-16 opacity-6 fw-300 ls-0px">/ Monthly</span></h5>
-                                    <a href="demo-business-pricing.html" class="btn btn-transparent-white-light btn-rounded btn-small ms-auto fw-500 btn-box-shadow">Get started</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end accordion item -->
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- end section -->
-<!-- start section -->
-<section class="overflow-hidden">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-12">
-                <div class="border-radius-6px h-500px md-h-450px sm-h-350px d-flex align-items-end justify-content-center overflow-hidden cover-background skrollr-zoom pb-9 xs-pb-12" style="background-image: url('https://via.placeholder.com/1920x1100')" data-bottom-top="transform:scale(1.2, 1.2) translateY(30px);" data-top-bottom="transform:scale(1, 1) translateY(-30px);">
-                    <div class="opacity-medium bg-gradient-dark-transparent"></div>
-                    <div class="row justify-content-center">
-                        <div class="col-11 col-md-7 position-relative z-index-1 text-center text-lg-start md-mb-35px sm-mb-25px">
-                            <h4 class="alt-font text-white mb-0 fw-300 fancy-text-style-4">We make the creative solutions for
-                                <span class="fw-600" data-fancy-text='{ "effect": "rotate", "string": ["business!", "problems!", "brands!"] }'></span>
-                            </h4> 
-                        </div>
-                        <div class="col-xl-5 col-lg-3 position-relative z-index-1 text-center animation-zoom">
-                            <a href="https://www.youtube.com/watch?v=cfXHhfNy7tU" class="position-relative d-inline-block text-center border border-color-transparent-white-very-light rounded-circle video-icon-box video-icon-large popup-youtube">
-                                <span>
-                                    <span class="video-icon">
-                                        <i class="bi bi-play-fill text-white"></i>
-                                    </span>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- end section -->
-<!-- start section -->
-<section class="bg-gradient-solitude-blue-transparent pt-0">
-    <div class="container">
-        <div class="row justify-content-center align-items-center" data-anime='{ "el": "childs", "translateX": [0, 0], "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 300, "easing": "easeOutQuad" }'>
-            <div class="col-4 col-lg-2 col-sm-3 xs-mb-25px">
-                <div class="swiper rounded-circle" data-slider-options='{ "slidesPerView": 1, "loop": true, "autoplay": { "delay": 1000, "disableOnInteraction": false },  "keyboard": { "enabled": true, "onlyInViewport": true }, "effect": "fade" }'>
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="https://via.placeholder.com/200x200" alt=""/>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://via.placeholder.com/200x200" alt=""/>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://via.placeholder.com/200x200" alt=""/>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://via.placeholder.com/200x200" alt=""/>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://via.placeholder.com/200x200" alt=""/>
-                        </div> 
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-5 col-xl-4 col-md-6 col-sm-7 text-center text-sm-start">
-                <h5 class="alt-font text-dark-gray lh-40 fw-500 ls-minus-1px mb-0 ms-10px lg-ms-0" data-anime='{ "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 500, "staggervalue": 300, "easing": "easeOutQuad" }'>Trusted by <span class="fw-700 text-base-color">25,000+</span> happy customers are using crafto.</h5>
-            </div>
-            <div class="col-xl-2 offset-xl-2 col-lg-3 col-sm-4 md-mt-35px text-center text-lg-start">
-                <h2 class="alt-font text-dark-gray fw-700 ls-minus-3px mb-5px" data-anime='{ "el": "lines", "translateY": [15, 0], "opacity": [0,1], "delay": 300, "staggervalue": 100, "easing": "easeOutQuad" }'>200+</h2>
-                <span class="text-dark-gray fw-500 lh-24 d-inline-block w-90 lg-w-80 sm-w-100" data-anime='{ "el": "lines", "translateY": [15, 0], "opacity": [0,1], "delay": 400, "staggervalue": 100, "easing": "easeOutQuad" }'>Creative team to care for projects.</span>
-            </div>
-            <div class="col-lg-2 col-sm-4 ps-40px md-ps-15px md-mt-35px text-center text-lg-start">
-                <h2 class="alt-font text-dark-gray fw-700 ls-minus-3px mb-5px" data-anime='{ "translateY": [15, 0], "opacity": [0,1], "delay": 100, "staggervalue": 100, "easing": "easeOutQuad" }'>4.9</h2>
-                <div class="review-star-icon fs-17 lh-20 d-block" data-anime='{ "translateY": [15, 0], "opacity": [0,1], "delay": 200, "staggervalue": 100, "easing": "easeOutQuad" }'>
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <span class="text-dark-gray fw-500" data-anime='{ "el": "lines", "translateY": [15, 0], "opacity": [0,1], "delay": 300, "staggervalue": 100, "easing": "easeOutQuad" }'>2,488 Rating</span>
-            </div>
-        </div>
-        <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 justify-content-center mt-4 sm-mt-40px" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 300, "easing": "easeOutQuad" }'>
-            <!-- start testimonials item -->
-            <div class="col testimonials-style-01 md-mb-30px">
-                <div class="position-relative bg-white testimonial-arrow ps-50px pe-50px pt-30px pb-30px lg-p-30px border-radius-10px box-shadow-quadruple-large">
-                    <span>Lorem ipsum dolor amet ipsum adipiscing elit eiusmod tempor lorem ipsum incididunt.</span>
-                </div>
-                <div class="mt-10px pt-20px pb-20px ps-15px pe-15px">
-                    <img src="https://via.placeholder.com/200x200" class="w-80px h-80px rounded-circle me-15px" alt="" />
-                    <div class="d-inline-block align-middle lh-20">
-                        <div class="fw-500 text-dark-gray alt-font mb-5px">Herman miller</div>
-                        <span class="fs-15">Chief financial</span>
-                    </div>
-                </div>
-            </div>
-            <!-- end testimonials item -->                            
-            <!-- start testimonials item -->
-            <div class="col testimonials-style-01 md-mb-30px">
-                <div class="position-relative bg-white testimonial-arrow ps-50px pe-50px pt-30px pb-30px lg-p-30px border-radius-10px box-shadow-quadruple-large">
-                    <span>Lorem ipsum dolor amet ipsum adipiscing elit eiusmod tempor lorem ipsum incididunt.</span>
-                </div>
-                <div class="mt-10px pt-20px pb-20px ps-15px pe-15px">
-                    <img src="https://via.placeholder.com/200x200" class="w-80px h-80px rounded-circle me-15px" alt="" />
-                    <div class="d-inline-block align-middle lh-20">
-                        <div class="fw-500 text-dark-gray alt-font mb-5px">Shoko mugikura</div>
-                        <span class="fs-15">Financial manager</span>
-                    </div>
-                </div>
-            </div>
-            <!-- end testimonials item -->
-            <!-- start testimonials item -->
-            <div class="col testimonials-style-01">
-                <div class="position-relative bg-white testimonial-arrow ps-50px pe-50px pt-30px pb-30px lg-p-30px border-radius-10px box-shadow-quadruple-large">
-                    <span>Lorem ipsum dolor amet ipsum adipiscing elit eiusmod tempor lorem ipsum incididunt.</span>
-                </div>
-                <div class="mt-10px pt-20px pb-20px ps-15px pe-15px">
-                    <img src="https://via.placeholder.com/200x200" class="w-80px h-80px rounded-circle me-15px" alt="" />
-                    <div class="d-inline-block align-middle lh-20">
-                        <div class="fw-500 text-dark-gray alt-font mb-5px">Matthew taylor</div>
-                        <span class="fs-15">Office manager</span>
-                    </div>
-                </div>
-            </div>
-            <!-- end testimonials item -->
-        </div>
-    </div>
-</section>
-<!-- end section -->
-<!-- start section -->
-<section class="position-relative overflow-hidden sm-pb-20px"> 
-    <div class="separator-line-9px bg-base-color position-absolute top-0px right-0px" data-bottom-top="width: 15%" data-center-top="width: 50%;"></div>
-    <div class="container">
-        <div class="row justify-content-center mb-2">
-            <div class="col-xl-7 col-lg-9 col-md-10 text-center">
-                <span class="bg-solitude-blue text-uppercase fs-13 ps-25px pe-25px alt-font fw-600 text-base-color lh-40 sm-lh-55 border-radius-100px d-inline-block mb-25px" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>Latest news</span>
-                <h3 class="alt-font text-dark-gray fw-600 ls-minus-1px" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>Stay updated with the latest trends and business news</h3>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 px-md-0">
-                <ul class="blog-classic blog-wrapper grid-loading grid grid-4col xl-grid-4col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col gutter-extra-large" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                    <li class="grid-sizer"></li>
-                    <!-- start blog item -->
-                    <li class="grid-item">
-                        <div class="card bg-transparent border-0 h-100">
-                            <div class="blog-image position-relative overflow-hidden border-radius-6px">
-                                <a href="demo-business-blog-single-modern.html"><img src="https://via.placeholder.com/600x430" alt="" /></a>
-                            </div>
-                            <div class="card-body px-0 pb-30px pt-30px xs-pb-15px">
-                                <span class="fs-14 text-uppercase mb-5px d-block"><a href="demo-business-blog.html" class="text-dark-gray fw-600 categories-text">Business</a><a href="#" class="blog-date">26 August 2023</a></span>
-                                <a href="demo-business-blog-single-modern.html" class="card-title mb-0 fw-500 fs-18 lh-30 text-dark-gray d-inline-block">The best way to predict the secure future is to create it</a>
-                            </div>
-                        </div>
-                    </li>
-                    <!-- end blog item -->
-                    <!-- start blog item -->
-                    <li class="grid-item">
-                        <div class="card bg-transparent border-0 h-100">
-                            <div class="blog-image position-relative overflow-hidden border-radius-6px">
-                                <a href="demo-business-blog-single-modern.html"><img src="https://via.placeholder.com/600x430" alt="" /></a>
-                            </div>
-                            <div class="card-body px-0 pb-30px pt-30px xs-pb-15px">
-                                <span class="fs-14 text-uppercase mb-5px d-block"><a href="demo-business-blog.html" class="text-dark-gray fw-600 categories-text">marketing</a><a href="#" class="blog-date">24 August 2023</a></span>
-                                <a href="demo-business-blog-single-modern.html" class="card-title mb-0 fw-500 fs-18 lh-30 text-dark-gray d-inline-block">Recognizing the need is the primary condition for design</a>
-                            </div>
-                        </div>
-                    </li>
-                    <!-- end blog item -->
-                    <!-- start blog item -->
-                    <li class="grid-item">
-                        <div class="card bg-transparent border-0 h-100">
-                            <div class="blog-image position-relative overflow-hidden border-radius-6px">
-                                <a href="demo-business-blog-single-modern.html"><img src="https://via.placeholder.com/600x430" alt="" /></a>
-                            </div>
-                            <div class="card-body px-0 pb-30px pt-30px xs-pb-15px">
-                                <span class="fs-14 text-uppercase mb-5px d-block"><a href="demo-business-blog.html" class="text-dark-gray fw-600 categories-text">Design</a><a href="#" class="blog-date">22 August 2023</a></span>
-                                <a href="demo-business-blog-single-modern.html" class="card-title mb-0 fw-500 fs-18 lh-30 text-dark-gray d-inline-block">Make business easy with beautiful application store</a>
-                            </div>
-                        </div>
-                    </li>
-                    <!-- end blog item -->
-                    <!-- start blog item -->
-                    <li class="grid-item">
-                        <div class="card bg-transparent border-0 h-100">
-                            <div class="blog-image position-relative overflow-hidden border-radius-6px">
-                                <a href="demo-business-blog-single-modern.html"><img src="https://via.placeholder.com/600x430" alt="" /></a>
-                            </div>
-                            <div class="card-body px-0 pb-30px pt-30px xs-pb-15px">
-                                <span class="fs-14 text-uppercase mb-5px d-block"><a href="demo-business-blog.html" class="text-dark-gray fw-600 categories-text">Business</a><a href="#" class="blog-date">20 August 2023</a></span>
-                                <a href="demo-business-blog-single-modern.html" class="card-title mb-0 fw-500 fs-18 lh-30 text-dark-gray d-inline-block">Computers are to design as microwaves are to cooking</a>
-                            </div>
-                        </div>
-                    </li>
-                    <!-- end blog item --> 
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- end section -->
-<!-- start section -->
-<section class="bg-dark-slate-blue pt-4 pb-4 lg-pt-6 lg-pb-6" data-parallax-background-ratio="0.5" style="background-image: url('https://via.placeholder.com/1920x1100')" data-anime='{ "translateX": [0, 0], "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 300, "easing": "easeOutQuad" }'>
-    <div class="opacity-medium bg-dark-slate-blue"></div>
-    <div class="container z-index-1 position-relative"> 
-        <div class="row align-items-center justify-content-center">
-            <div class="col-12 text-center">
-                <h4 class="alt-font text-white mb-0 fw-300 fancy-text-style-4">We make the creative solutions for
-                    <span class="fw-600" data-fancy-text='{ "effect": "wave", "direction": "down", "string": ["business!", "problems!", "brands!"], "duration": 3500 }'></span>
-                </h4> 
-            </div>
-        </div>
-    </div>
-</section>
-<!-- end section -->
-<!-- start subscription popup -->
-<div id="subscribe-popup" class="container subscribe-popup contact-form-style-01 position-relative text-center xs-p-0 mfp-hide">
-    <!-- start contact form -->
-    <div class="row g-0 position-relative">
-        <div class="col-lg-5 cover-background md-h-600px xs-h-400px" style="background-image:url('https://via.placeholder.com/1082x1082');"></div>
-        <div class="col-lg-7">
-            <div class="p-14 xl-p-11 bg-white">
-                <span class="mb-5px d-block">Looking for a business agent?</span>
-                <h3 class="d-inline-block alt-font fw-600 text-dark-gray mb-8 ls-minus-1px">How we can help?</h3>
-                <form action="email-templates/contact-form.php" method="post">
-                    <div class="position-relative form-group mb-15px">
-                        <span class="form-icon"><i class="bi bi-emoji-smile"></i></span>
-                        <input type="text" name="name" class="form-control required" placeholder="Enter your name*" />
-                    </div>
-                    <div class="position-relative form-group mb-15px">
-                        <span class="form-icon"><i class="bi bi-envelope"></i></span>
-                        <input type="email" name="email" class="form-control required" placeholder="Enter your email*" />
-                    </div>
-                    <div class="position-relative form-group mb-15px">
-                        <span class="form-icon"><i class="bi bi-telephone-outbound"></i></span>
-                        <input type="tel" name="phone" class="form-control" placeholder="Enter your phone" />
-                    </div>
-                    <div class="position-relative form-group form-textarea">
-                        <span class="form-icon"><i class="bi bi-chat-square-dots"></i></span>
-                        <textarea placeholder="Your message" name="comment" class="form-control" rows="3"></textarea>
-                        <input type="hidden" name="redirect" value="">
-                        <button class="btn btn-medium btn-box-shadow btn-round-edge w-100 btn-base-color submit mt-15px" type="submit">Send message</button>
-                        <div class="form-results mt-20px d-none"></div>
-                    </div>
-                </form>
-                <label for="newsletter-off" class="fs-15 mt-15px"><input class="w-auto me-10px position-relative top-1px p-0" type="checkbox" id="newsletter-off" name="newsletter-off">Don't show this popup again</label>
-            </div>
-        </div>
-        <button title="Close (Esc)" type="button" class="mfp-close text-dark-gray"></button>
-    </div>
-    <!-- end contact form -->
-</div> 
+@section('title', 'Home')
 
+
+
+@section('content')
+
+<!-- Hero Section with Background Video and Text Overlay -->
+<section class="position-relative overflow-hidden vh-100 d-flex align-items-center">
+    <video autoplay muted loop playsinline class="w-100 h-100 object-fit-cover position-absolute top-0 start-0">
+        <source src="{{ asset('videos/hero.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-60"></div>
+    
+    <!-- Hero Content -->
+    {{-- 
+    <div class="container hero-content text-white text-center">
+        <h1 class="display-2 fw-bold mb-4 animate__animated animate__fadeInUp">Capturing Stories That Matter</h1>
+        <p class="lead mb-5 animate__animated animate__fadeInUp animate__delay-1s">Award-winning film production company specializing in documentary storytelling</p>
+        <div class="animate__animated animate__fadeInUp animate__delay-2s">
+            <a href="#about" class="btn btn-light btn-custom me-3">Learn More</a>
+            <a href="{{ route('contact') }}" class="btn btn-outline-light btn-custom">Contact Us</a>
+        </div>
+    </div>
+     
+    
+    <div class="position-absolute bottom-0 start-50 translate-middle-x mb-4 animate__animated animate__fadeInUp animate__delay-3s">
+        <a href="#about" class="text-white">
+            <i class="bi bi-chevron-down fs-2"></i>
+        </a>
+    </div>
+--}}
+</section>
+
+<!-- About Section with Enhanced Features -->
+<section id="about" class="py-5 bg-light">
+    <div class="container py-4">
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-7 text-center">
+                <h2 class="display-4 mb-3">About Us</h2>
+                <div class="section-divider"></div>
+                <p class="lead text-muted mb-5">We craft compelling visual stories that captivate audiences and inspire action.</p>
+            </div>
+        </div>
+        
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 justify-content-center">
+            @php
+                $features = [
+                    ['icon' => 'bi-shield-check', 'title' => 'World-class Services', 'text' => 'Premium production quality with attention to every detail'],
+                    ['icon' => 'bi-hourglass', 'title' => 'Experience Strategy', 'text' => 'Strategic approach to storytelling that resonates with audiences'],
+                    ['icon' => 'bi-award', 'title' => 'Award Winning', 'text' => 'Recognized excellence in documentary filmmaking'],
+                    ['icon' => 'bi-briefcase', 'title' => 'Business Growth', 'text' => 'Help brands amplify their message and expand their reach'],
+                ];
+            @endphp
+            
+            @foreach($features as $feature)
+                <div class="col">
+                    <div class="text-center p-4">
+                        <div class="feature-icon mx-auto">
+                            <i class="bi {{ $feature['icon'] }}"></i>
+                        </div>
+                        <h5 class="fw-bold mt-3">{{ $feature['title'] }}</h5>
+                        <p class="text-muted">{{ $feature['text'] }}</p>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+
+<!-- Our Films Section with Enhanced Cards and Hidden Scrollbar -->
+<section class="py-5 bg-white">
+    <div class="container py-4">
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-7 text-center">
+                <h2 class="display-4 mb-3">Our Films</h2>
+                <div class="section-divider"></div>
+                <p class="lead text-muted mb-5">Explore our award-winning documentary collection</p>
+            </div>
+        </div>
+
+        <div class="position-relative">
+            <button class="btn position-absolute top-50 start-0 translate-middle-y z-2" id="filmsScrollLeft" aria-label="Scroll Left">
+                <i class="bi bi-chevron-left"></i>
+            </button>
+            <button class="btn position-absolute top-50 end-0 translate-middle-y z-2" id="filmsScrollRight" aria-label="Scroll Right">
+                <i class="bi bi-chevron-right"></i>
+            </button>
+
+            <div class="d-flex overflow-auto px-5" id="filmsCarousel" style="gap: 1.5rem; scroll-behavior: smooth;">
+                @foreach (range(1, 6) as $i)
+                    <div class="flex-shrink-0" style="width: 300px;">
+                        <div class="card h-100">
+                            <div class="position-relative">
+                                <img src="{{ asset('images/film'.$i.'.jpg') }}" class="card-img-top" alt="Film {{ $i }}">
+                                <div class="position-absolute top-0 end-0 m-2">
+                                    <span class="badge bg-primary">2023</span>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Film Title {{ $i }}</h5>
+                                <p class="card-text text-muted">Brief description or tagline of the film that captures its essence.</p>
+                                <a href="#" class="btn btn-sm btn-outline-primary">Watch Trailer</a>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section with Enhanced Cards -->
+<section class="py-5 bg-light">
+    <div class="container py-4">
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-7 text-center">
+                <h2 class="display-4 mb-3">Featured Projects</h2>
+                <div class="section-divider"></div>
+                <p class="lead text-muted mb-5">Discover our impactful work across different themes</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            @foreach (range(1, 3) as $i)
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="position-relative overflow-hidden">
+                            <img src="{{ asset('images/project' . $i . '.jpg') }}" class="card-img-top" alt="Project {{ $i }}">
+                            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-0 hover-overlay transition" 
+                                 style="transition: all 0.3s ease;"></div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Project Name {{ $i }}</h5>
+                            <p class="card-text text-muted">Brief description of the project's focus and the impact it created on its audience.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <a href="#" class="btn btn-outline-primary btn-sm">Read More</a>
+                                <div class="text-muted small">
+                                    <i class="bi bi-calendar me-1"></i> {{ 2022 + $i }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+
+<!-- Awards Section with Continuous Horizontal Scrolling -->
+<section class="py-5 bg-white">
+    <div class="container py-4">
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-7 text-center">
+                <h2 class="display-4 mb-3">Awards & Recognitions</h2>
+                <div class="section-divider"></div>
+                <p class="lead text-muted mb-5">Our work has been recognized at prestigious film festivals around the world</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Continuous scrolling awards carousel -->
+    <div class="awards-container">
+        <div class="awards-track">
+            @foreach (range(1, 6) as $i)
+                <div class="award-card flex-shrink-0 mx-3" style="width: 300px;">
+                    <div class="card p-4 h-100">
+                        <div class="text-center mb-3">
+                            <i class="bi bi-trophy text-warning" style="font-size: 2rem;"></i>
+                        </div>
+                        <h5 class="card-title fw-bold text-center">{{ ['Cannes Film Festival', 'Sundance', 'Toronto International', 'Berlin International', 'Venice Film Festival', 'Tribeca Film Festival'][$i-1] }}</h5>
+                        <p class="card-text text-center text-muted">Awarded for excellence in documentary storytelling – {{ 2020 + $i }}.</p>
+                    </div>
+                </div>
+            @endforeach
+            
+            <!-- Duplicate items for seamless scrolling -->
+            @foreach (range(1, 6) as $i)
+                <div class="award-card flex-shrink-0 mx-3" style="width: 300px;">
+                    <div class="card p-4 h-100">
+                        <div class="text-center mb-3">
+                            <i class="bi bi-trophy text-warning" style="font-size: 2rem;"></i>
+                        </div>
+                        <h5 class="card-title fw-bold text-center">{{ ['Cannes Film Festival', 'Sundance', 'Toronto International', 'Berlin International', 'Venice Film Festival', 'Tribeca Film Festival'][$i-1] }}</h5>
+                        <p class="card-text text-center text-muted">Awarded for excellence in documentary storytelling – {{ 2020 + $i }}.</p>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action Section -->
+<section class="py-5 bg-primary text-white">
+    <div class="container py-4 text-center">
+        <h2 class="display-5 mb-4">Ready to Tell Your Story?</h2>
+        <p class="lead mb-5">Let's collaborate to create compelling content that connects with your audience</p>
+        <a href="{{ route('contact') }}" class="btn btn-light btn-lg btn-custom">Get in Touch</a>
+    </div>
+</section>
+
+<!-- Partners Section with Improved Layout -->
+<section class="py-5 bg-light">
+    <div class="container py-4">
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-7 text-center">
+                <h2 class="display-4 mb-3">Our Partners</h2>
+                <div class="section-divider"></div>
+                <p class="lead text-muted mb-5">Proud to work with these amazing organizations</p>
+            </div>
+        </div>
+        
+        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 justify-content-center align-items-center g-4">
+            @foreach (range(1, 5) as $i)
+                <div class="col text-center">
+                    <div class="p-4 bg-white rounded shadow-sm h-100 d-flex align-items-center justify-content-center" style="min-height: 100px;">
+                        <img src="{{ asset('images/partner' . $i . '.png') }}" alt="Partner {{ $i }}" class="img-fluid" style="max-height: 60px;">
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="py-5 bg-white">
+    <div class="container py-4">
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-7 text-center">
+                <h2 class="display-4 mb-3">Client Testimonials</h2>
+                <div class="section-divider"></div>
+                <p class="lead text-muted mb-5">What our clients say about working with us</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            @foreach (range(1, 3) as $i)
+                <div class="col-md-4">
+                    <div class="card h-100 p-4">
+                        <div class="text-warning mb-3">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="card-text fst-italic">"{{ ['Working with this team transformed our brand story into a compelling visual narrative that resonated with our audience.', 'Their attention to detail and creative vision exceeded our expectations. The final documentary was simply outstanding.', 'A truly collaborative experience that resulted in an award-winning film we are proud to share with the world.'][$i-1] }}"</p>
+                        <div class="d-flex align-items-center mt-4">
+                            <div class="flex-shrink-0">
+                                <img src="{{ asset('images/user_avatar.png') }}" class="rounded-circle" width="50" height="50" alt="Client {{ $i }}">
+                            </div>
+                            <div class="ms-3">
+                                <h6 class="mb-0 fw-bold">{{ ['Sarah Johnson', 'Michael Chen', 'Emily Rodriguez'][$i-1] }}</h6>
+                                <small class="text-muted">{{ ['CEO, Ecosystem Fund', 'Marketing Director, Tech Innovations', 'Producer, Global Documentaries'][$i-1] }}</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+
+@endsection
+
+@section('scripts')
+<!-- JS for Navigation and Scroll Effects -->
+<script>
+    // Navbar scroll transition (if you want to add this back)
+ 
+
+    // Scroll buttons for films carousel
+    const filmsContainer = document.getElementById('filmsCarousel');
+    
+    document.getElementById('filmsScrollLeft').addEventListener('click', () => {
+        filmsContainer.scrollBy({ left: -320, behavior: 'smooth' });
+    });
+
+    document.getElementById('filmsScrollRight').addEventListener('click', () => {
+        filmsContainer.scrollBy({ left: 320, behavior: 'smooth' });
+    });
+    
+
+  
+</script>
 @endsection

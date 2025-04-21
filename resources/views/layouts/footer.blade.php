@@ -19,25 +19,16 @@
                 </ul>
             </div>
             <!-- end footer column -->  
-            <!-- start footer column -->
-            <div class="col-7 col-lg-2 col-sm-4 md-mb-50px sm-mb-30px order-2 order-lg-3">
-                <span class="alt-font d-block text-white mb-5px">Services</span>
-                <ul>
-                    <li><a href="{{ route('services') }}">Branding</a></li>
-                    <li><a href="{{ route('services') }}">eCommerce</a></li>
-                    <li><a href="{{ route('services') }}">Content</a></li>
-                    <li><a href="{{ route('services') }}">Marketing</a></li>
-                </ul>
-            </div>
-            <!-- end footer column -->
+          
             <!-- start footer column -->
             <div class="col-5 col-lg-2 col-sm-4 md-mb-50px sm-mb-30px order-3 order-lg-4">
                 <span class="alt-font d-block text-white mb-5px">Social connect</span>
                 <ul>
                     <li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
-                    <li><a href="http://www.dribbble.com" target="_blank">Dribbble</a></li>
-                    <li><a href="http://www.twitter.com" target="_blank">Twitter</a></li>
                     <li><a href="http://www.instagram.com" target="_blank">Instagram</a></li>
+                    <li><a href="http://www.linkedin.com" target="_blank">Linkedin</a></li>
+                    <li><a href="http://www.twitter.com" target="_blank">Twitter</a></li>
+                   
                 </ul>
             </div>
             <!-- end footer column -->
