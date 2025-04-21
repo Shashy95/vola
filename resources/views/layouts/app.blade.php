@@ -23,6 +23,7 @@
         <link rel="stylesheet" href="{{ asset('css/business.css') }}" />
 
         <style>
+            
           /* Hide scrollbars but keep functionality */
           #filmsCarousel::-webkit-scrollbar,
           #awardsCarousel::-webkit-scrollbar {
@@ -81,6 +82,30 @@
               background-color: rgba(255, 255, 255, 0.9) !important;
           }
 
+          .project-card {
+        /* Makes sure both the image and iframe are the same size */
+        overflow: hidden;
+        border-radius: 8px;
+    }
+
+    /* Ensures that both images and iframes cover their container equally */
+    .project-card img, 
+    .elementor-video-iframe {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;  /* Ensures both fit into the container */
+    }
+
+    .elementor-video-iframe {
+        border: none; /* Removes border around the iframe */
+        min-height: 220px;  /* Sets a minimum height to ensure consistency */
+    }
+
+    /* Container for both image and video */
+    .project-card .position-relative {
+        height: 220px;  /* Ensures both the image and iframe have the same height */
+    }
+
       </style>
       
       
@@ -105,7 +130,6 @@
         <script type="text/javascript" src="{{ asset('js/jquery.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/vendors.min.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
-      
         @yield('scripts')
     </body>
 </html>

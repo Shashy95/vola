@@ -4,7 +4,7 @@
         <div class="row justify-content-center">
             <!-- start footer column -->
             <div class="col-lg-3 col-sm-6 last-paragraph-no-margin order-5 order-sm-4 order-lg-1 text-center text-sm-start">
-                <a href="{{ route('home') }}" class="footer-logo mb-15px d-block d-lg-inline-block"><img src="{{ asset('images/demo-business-logo-white.png') }}" data-at2x="{{ asset('images/demo-business-logo-white@2x.png') }}" alt=""></a>
+               
                 <p class="w-90 sm-w-100 d-inline-block mb-15px">Lorem ipsum is consectetur adipiscing eiusmod tempor.</p>
                 <p>&COPY;  2024 <a href="{{ route('home') }}" target="_blank" class="text-white text-decoration-line-bottom">Crafto.</a></p>
             </div>
