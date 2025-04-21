@@ -1,156 +1,73 @@
 @extends('layouts.app')
 
-@section('title', 'Contact Us')
-
 @section('content')
-<!-- Page Header with Background Image -->
-<section class="position-relative vh-50 d-flex align-items-center">
-    <div class="bg-dark position-absolute w-100 h-100 top-0 start-0" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('{{ asset('images/contact-bg.jpg') }}') center/cover no-repeat; min-height: 350px;"></div>
-    <div class="container position-relative text-white text-center py-5 my-5">
-        <h1 class="display-2 fw-bold mb-4 animate__animated animate__fadeInUp">Contact Us</h1>
-        <p class="lead mb-0 animate__animated animate__fadeInUp animate__delay-1s">We'd love to hear from you and discuss your project</p>
-    </div>
-</section>
-
-<!-- Contact Information Section -->
-<section class="py-5 bg-light">
-    <div class="container py-4">
-        <div class="row justify-content-center mb-5">
-            <div class="col-lg-7 text-center">
-                <h2 class="display-4 mb-3">Get In Touch</h2>
-                <div class="section-divider"></div>
-                <p class="lead text-muted mb-5">Have a project in mind? Let's work together to create something amazing.</p>
-            </div>
-        </div>
-        
-        <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
-            <div class="col">
-                <div class="card h-100 text-center p-4 border-0 shadow-sm">
-                    <div class="card-body">
-                        <div class="mb-3">
-                            <i class="bi bi-geo-alt text-primary"></i>
-                        </div>
-                        <h5 class="card-title fw-bold">Our Location</h5>
-                        <p class="card-text text-muted">123 Film Studio Way<br>Los Angeles, CA 90210</p>
+<section class="page-title-big-typography bg-dark-gray ipad-top-space-margin" data-parallax-background-ratio="0.5" style="background-image: url(https://via.placeholder.com/1920x1100)">
+    <div class="opacity-extra-medium bg-dark-slate-blue"></div>
+    <div class="container">
+        <div class="row align-items-center justify-content-center extra-small-screen">
+            <div class="col-12 position-relative text-center page-title-extra-large">
+                <h1 class="m-auto text-white text-shadow-double-large fw-500 ls-minus-3px xs-ls-minus-2px" data-anime='{ "translateY": [15, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>Contact</h1>
+            </div> 
+            <div class="down-section text-center" data-anime='{ "translateY": [-15, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                <a href="#down-section" aria-label="scroll down" class="section-link">
+                    <div class="d-flex justify-content-center align-items-center mx-auto rounded-circle fs-30 text-white">
+                        <i class="feather icon-feather-chevron-down"></i>
                     </div>
-                </div>
-            </div>
-            
-            <div class="col">
-                <div class="card h-100 text-center p-4 border-0 shadow-sm">
-                    <div class="card-body">
-                        <div class="mb-3">
-                            <i class="bi bi-envelope text-primary" ></i>
-                        </div>
-                        <h5 class="card-title fw-bold">Email Us</h5>
-                        <p class="card-text text-muted">info@yourstudio.com<br>projects@yourstudio.com</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col">
-                <div class="card h-100 text-center p-4 border-0 shadow-sm">
-                    <div class="card-body">
-                        <div class="mb-3">
-                            <i class="bi bi-telephone text-primary"></i>
-                        </div>
-                        <h5 class="card-title fw-bold">Call Us</h5>
-                        <p class="card-text text-muted">(555) 123-4567<br>(555) 765-4321</p>
-                    </div>
-                </div>
+                </a>
             </div>
         </div>
     </div>
 </section>
-
-<!-- Contact Form Section -->
-<section class="py-5 bg-white">
-    <div class="container py-4">
+<!-- end page title -->
+<!-- start section -->
+<section id="down-section" class="overflow-hidden">
+    <div class="container"> 
+        <div class="row g-0 justify-content-center">
+            
+            <div class="col-lg-5 col-md-6" data-anime='{ "translateX": [15, 0], "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                <div class="bg-base-color p-18 lg-p-15 h-100"> 
+                    <span class="text-white text-decoration-line-bottom mb-10px d-inline-block">Keep in touch?</span>
+                    <p class="text-white opacity-5">401 Broadway, 24th Floor, Orchard View, London</p>
+                    <span class="text-white text-decoration-line-bottom mb-10px d-inline-block">Toll free customer care?</span>
+                    <p><a href="tel:1800222000" class="text-white opacity-5">1-800-222-000</a><br><a href="tel:1800222002" class="text-white opacity-5">1-800-222-002</a></p>
+                    <span class="text-white text-decoration-line-bottom mb-10px d-inline-block">Need live support?</span>
+                    <a href="mailto:info@yourdomain.com" class="text-white opacity-5 d-block">info@yourdomain.com</a>
+                    <a href="mailto:help@yourdomain.com" class="text-white opacity-5 d-block">help@yourdomain.com</a>  
+                </div>
+            </div>
+            <div class="col-lg-5 offset-lg-1">  
+                <div class="pt-5 md-pt-45px contact-form-style-01" data-anime='{ "translateX": [0, 0], "opacity": [0,1], "duration": 600, "delay": 300, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                    <h4 class="d-inline-block alt-font fw-600 text-dark-gray ls-minus-1px mb-30px">Feel free to reach via contact us form.</h4>
+                    <!-- start contact form -->
+                    <form action="email-templates/contact-form.php" method="post">
+                        <div class="position-relative form-group mb-20px">
+                            <span class="form-icon"><i class="bi bi-emoji-smile"></i></span>
+                            <input type="text" name="name" class="form-control required" placeholder="Your name*">
+                        </div> 
+                        <div class="position-relative form-group mb-20px">
+                            <span class="form-icon"><i class="bi bi-envelope"></i></span>
+                            <input type="email" name="email" class="form-control required" placeholder="Your email address*">
+                        </div> 
+                        <div class="position-relative form-group form-textarea">
+                            <span class="form-icon"><i class="bi bi-chat-square-dots"></i></span>
+                            <textarea placeholder="Your message" name="comment" class="form-control" rows="3"></textarea>
+                            <input type="hidden" name="redirect" value="">
+                            <button class="btn btn-small btn-round-edge btn-dark-gray btn-box-shadow mt-20px m-auto submit" type="submit">Send message</button>
+                            <div class="form-results mt-20px d-none"></div>
+                        </div>
+                    </form>
+                    <!-- end contact form -->
+                </div>
+            </div>  
+        </div>
+    </div>
+</section>
+<!-- end section --> 
+<!-- start section -->
+<section class="p-0" id="location" data-anime='{ "translate": [0, 0], "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 300, "easing": "easeOutQuad" }'>
+    <div class="container-fluid">
         <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="card border-0 shadow-lg p-3 p-md-5">
-                    <div class="card-body">
-                        <h3 class="card-title fw-bold mb-4 text-center">Send Us a Message</h3>
-                        
-                        @if(session('success'))
-                            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                                {{ session('success') }}
-                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                            </div>
-                        @endif
-                        
-                        <form action="" method="POST" id="contactForm">
-                            @csrf
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <div class="form-floating mb-3">
-                                        <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" placeholder="Your Name" value="{{ old('name') }}" required>
-                                 
-                                        @error('name')
-                                            <div class="invalid-feedback">{{ $message }}</div>
-                                        @enderror
-                                    </div>
-                                </div>
-                                
-                                <div class="col-md-6">
-                                    <div class="form-floating mb-3">
-                                        <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email" placeholder="Your Email" value="{{ old('email') }}" required>
-                                      
-                                        @error('email')
-                                            <div class="invalid-feedback">{{ $message }}</div>
-                                        @enderror
-                                    </div>
-                                </div>
-                                
-                                <div class="col-12">
-                                    <div class="form-floating mb-3">
-                                        <input type="text" class="form-control @error('subject') is-invalid @enderror" id="subject" name="subject" placeholder="Subject" value="{{ old('subject') }}" required>
-                                       
-                                        @error('subject')
-                                            <div class="invalid-feedback">{{ $message }}</div>
-                                        @enderror
-                                    </div>
-                                </div>
-                                
-                              
-                                
-                                <div class="col-12">
-                                    <div class="form-floating mb-3">
-                                        <textarea class="form-control @error('message') is-invalid @enderror" id="message" name="message" placeholder="Your Message" style="height: 200px" required></textarea>
-                                      
-                                        @error('message')
-                                            <div class="invalid-feedback">{{ $message }}</div>
-                                        @enderror
-                                    </div>
-                                </div>
-                                
-                              
-                                
-                                <div class="col-12 text-center">
-                                    <button type="submit" class="btn btn-primary btn-lg px-5">Send Message</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Map Section -->
-<section class="py-5 bg-light">
-    <div class="container py-4">
-        <div class="row justify-content-center mb-5">
-            <div class="col-lg-7 text-center">
-                <h2 class="display-4 mb-3">Our Location</h2>
-                <div class="section-divider"></div>
-                <p class="lead text-muted mb-5">Find us in the heart of the film district</p>
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-12">
+            <div class="col-12 p-0">
                 <div class="ratio ratio-21x9 rounded overflow-hidden shadow-lg">
                     <!-- Replace with your actual Google Maps embed code -->
                     <iframe 
@@ -168,11 +85,4 @@
         </div>
     </div>
 </section>
-
-
-
-@endsection
-
-@section('scripts')
-
 @endsection
