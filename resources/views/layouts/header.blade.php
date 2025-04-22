@@ -20,9 +20,9 @@
                 <div class="collapse navbar-collapse" id="navbarNav"> 
                     <ul class="navbar-nav alt-font"> 
                         <li class="nav-item"><a href="{{ route('home') }}" class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}">Home</a></li>
-                        <li class="nav-item"><a href="{{ route('about') }}" class="nav-link {{ request()->routeIs('about') ? 'active' : '' }}">About</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link {{ request()->routeIs('about') ? 'active' : '' }}">About</a></li>
                         <li class="nav-item dropdown dropdown-with-icon-style02">
-                            <a href="{{ route('services') }}" class="nav-link {{ request()->routeIs('services') || request()->routeIs('service-details') ? 'active' : '' }}">Services</a>
+                            <a href="#" class="nav-link {{ request()->routeIs('services') || request()->routeIs('service-details') ? 'active' : '' }}">Services</a>
                            
                         </li>
                        

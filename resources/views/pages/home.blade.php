@@ -227,13 +227,13 @@
       <div class="row g-3">
         <!-- Loop through images -->
         <div class="col-6 col-md-4 col-lg-3">
-          <img src="https://picsum.photos/id/1011/600/400" class="img-fluid rounded-3 shadow-sm w-100" alt="Image 1">
+          <img src="https://picsum.photos/id/1011/600/400" class="img-fluid rounded-3 shadow-sm w-100 equal-image" alt="Image 1">
         </div>
         <div class="col-6 col-md-4 col-lg-3">
-          <img src="https://picsum.photos/id/1025/600/400" class="img-fluid rounded-3 shadow-sm w-100" alt="Image 2">
+          <img src="https://picsum.photos/id/1025/600/400" class="img-fluid rounded-3 shadow-sm w-100 equal-image" alt="Image 2">
         </div>
         <div class="col-6 col-md-4 col-lg-3">
-          <img src="https://picsum.photos/id/1036/600/400" class="img-fluid rounded-3 shadow-sm w-100" alt="Image 3">
+          <img src="https://picsum.photos/id/1036/600/400" class="img-fluid rounded-3 shadow-sm w-100 equal-image" alt="Image 3">
         </div>
         <div class="col-6 col-md-4 col-lg-3">
           <img src="https://picsum.photos/id/1045/600/400" class="img-fluid rounded-3 shadow-sm w-100" alt="Image 4">
@@ -286,25 +286,17 @@
   
       <!-- Dummy Client Logos Grid -->
       <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 g-4 justify-content-center align-items-center text-center">
-        <div class="col">
-          <img src="https://picsum.photos/seed/logo1/150/60" alt="Client 1" class="img-fluid rounded shadow-sm" style="object-fit: contain;">
-        </div>
-        <div class="col">
-          <img src="https://picsum.photos/seed/logo2/150/60" alt="Client 2" class="img-fluid rounded shadow-sm" style="object-fit: contain;">
-        </div>
-        <div class="col">
-          <img src="https://picsum.photos/seed/logo3/150/60" alt="Client 3" class="img-fluid rounded shadow-sm" style="object-fit: contain;">
-        </div>
-        <div class="col">
-          <img src="https://picsum.photos/seed/logo4/150/60" alt="Client 4" class="img-fluid rounded shadow-sm" style="object-fit: contain;">
-        </div>
-        <div class="col">
-          <img src="https://picsum.photos/seed/logo5/150/60" alt="Client 5" class="img-fluid rounded shadow-sm" style="object-fit: contain;">
-        </div>
-        <div class="col">
-          <img src="https://picsum.photos/seed/logo6/150/60" alt="Client 6" class="img-fluid rounded shadow-sm" style="object-fit: contain;">
-        </div>
+        @foreach ([
+          'client1.webp', 'aml.png', 'crd.png', 'kcb.png', 'taifagas.png', 'equit.png'
+        ] as $image)
+          <div class="col">
+            <div class=" p-2 d-flex align-items-center justify-content-center" style="width: 100%; height: 120px;">
+              <img src="{{ asset('images/' . $image) }}" alt="Client Logo" class="img-fluid" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+            </div>
+          </div>
+        @endforeach
       </div>
+      
     </div>
   </section>
   
