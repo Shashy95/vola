@@ -412,6 +412,26 @@ strong {
     font-size: 8.125rem;
     line-height: 8.125rem;
 }
+
+/* Addictional styles */
+
+.main-section {
+    background-color: #10322c;
+    padding: 70px 80px !important;
+    color: white !important;
+}
+
+.card-body.px-4.py-4.d-flex.flex-column a {
+    padding: 13px 30px;
+}
+
+footer.pt-5.pb-5.sm-pt-40px.sm-pb-45px.footer-dark.bg-extra-medium-slate-blue {
+    background: #10322c;
+}
+.feature-box-content span {
+    color: white;
+}
+
 .fs-140 {
     font-size: 8.75rem;
     line-height: 8.75rem;

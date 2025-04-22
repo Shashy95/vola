@@ -31,7 +31,7 @@
 
 <!-- end section -->
 <!-- start section -->
-<section class="border-bottom border-color-extra-medium-gray pt-40px pb-40px overflow-hidden">
+<section class="border-bottom main-section pt-40px pb-40px overflow-hidden">
     <div class="container">
         <div class="row row-cols-1 row-cols-lg-4 row-cols-sm-2 justify-content-center align-items-center" data-anime='{ "el": "childs", "translateX": [-15, 0], "translateY": [15, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
             <!-- start features box item -->
@@ -87,207 +87,228 @@
 </section>
 <!-- end section -->
 <!-- start section -->
-<section class="pb-8 md-pb-17 xs-pb-28">
+
+  
+<!-- end section -->
+<!-- start section -->
+<section class="pb-8 md:pb-17 xs:pb-28 bg-light position-relative">
     <style>
       .carousel-img {
-        height: 650px;
+        height: 500px;
         object-fit: cover;
         width: 100%;
+        border-radius: 12px;
+      }
+  
+      #filmsCarousel {
+        scroll-snap-type: x mandatory;
+      }
+  
+      #filmsCarousel > div {
+        scroll-snap-align: start;
+      }
+  
+      .carousel-btn {
+        background-color: #ffffff;
+        color: #10322c;
+        border: 2px solid #10322c;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+  
+      .carousel-btn:hover {
+        background-color: #10322c;
+        color: white;
       }
     </style>
+  
     <div class="container">
-      <div class="row align-items-center justify-content-center">
-        <div
-          class="col-xl-12 col-lg-12 col-md-12 md-mb-50px text-center text-lg-start"
-          data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'
-        >
-          <span
-            class="bg-solitude-blue text-uppercase fs-13 ps-25px pe-25px alt-font fw-600 text-base-color lh-40 sm-lh-55 border-radius-100px d-inline-block mb-25px"
-            data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'
-          >
-            Our Films
-          </span>
+      <!-- Section Heading -->
+      <div class="row justify-content-center mb-5">
+        <div class="col-xl-8 text-center">
+            <h4 class="alt-font fw-600 mb-2" style="color: #10322c;">Explore Our Conservation Films</h4>
+          <p class="text-muted mb-0">Powerful stories captured from the wild. Scroll through our collection of immersive documentaries and visual campaigns.</p>
+        </div>
+      </div>
   
-          <div class="position-relative">
-            <button class="btn position-absolute top-50 start-0 translate-middle-y z-2" id="filmsScrollLeft" aria-label="Scroll Left">
-              <i class="bi bi-chevron-left"></i>
-            </button>
-            <button class="btn position-absolute top-50 end-0 translate-middle-y z-2" id="filmsScrollRight" aria-label="Scroll Right">
-              <i class="bi bi-chevron-right"></i>
-            </button>
+      <!-- Carousel -->
+      <div class="position-relative">
+        <!-- Navigation Buttons -->
+        <button class="carousel-btn position-absolute top-50 start-0 translate-middle-y z-2" id="filmsScrollLeft" aria-label="Scroll Left">
+          <i class="bi bi-chevron-left"></i>
+        </button>
+        <button class="carousel-btn position-absolute top-50 end-0 translate-middle-y z-2" id="filmsScrollRight" aria-label="Scroll Right">
+          <i class="bi bi-chevron-right"></i>
+        </button>
   
-            <div class="d-flex overflow-auto px-5" id="filmsCarousel" style="gap: 1.5rem; scroll-behavior: smooth;">
-              
-              <div class="flex-shrink-0" style="width: 350px;">
-                <div class="card h-100">
-                  <div class="position-relative">
-                    <a href="#">
-                      <img 
-                        src="https://ngoteyawild.co.tz/wp-content/uploads/2023/11/closure-covers-03-scaled.jpg" 
-                        alt="Image" 
-                        class="card-img-top carousel-img">
-                    </a>
-                  </div>
-                </div>
-              </div>
+        <!-- Scrollable Cards -->
+        <div class="d-flex overflow-auto px-5" id="filmsCarousel" style="gap: 1.5rem; scroll-behavior: smooth;">
+          <!-- Carousel Item -->
+          <div class="flex-shrink-0" style="width: 350px;">
+            <div class="card border-0 shadow-sm">
+              <a href="#">
+                <img 
+                  src="https://ngoteyawild.co.tz/wp-content/uploads/2023/11/closure-covers-03-scaled.jpg" 
+                  alt="Film 1" 
+                  class="carousel-img"
+                />
+              </a>
+            </div>
+          </div>
   
-              <div class="flex-shrink-0" style="width: 350px;">
-                <div class="card h-100">
-                  <div class="position-relative">
-                    <a href="#">
-                      <img 
-                        src="https://ngoteyawild.co.tz/wp-content/uploads/2023/11/MAHALE-COVERS-scaled.jpeg" 
-                        alt="Image" 
-                        class="card-img-top carousel-img">
-                    </a>
-                  </div>
-                </div>
-              </div>
+          <div class="flex-shrink-0" style="width: 350px;">
+            <div class="card border-0 shadow-sm">
+              <a href="#">
+                <img 
+                  src="https://ngoteyawild.co.tz/wp-content/uploads/2023/11/MAHALE-COVERS-scaled.jpeg" 
+                  alt="Film 2" 
+                  class="carousel-img"
+                />
+              </a>
+            </div>
+          </div>
   
-              <div class="flex-shrink-0" style="width: 350px;">
-                <div class="card h-100">
-                  <div class="position-relative">
-                    <a href="#">
-                      <img 
-                        src="https://ngoteyawild.co.tz/wp-content/uploads/2023/11/nyekweri-cover.2jpg-01-min-scaled.jpg" 
-                        alt="Image" 
-                        class="card-img-top carousel-img">
-                    </a>
-                  </div>
-                </div>
-              </div>
+          <div class="flex-shrink-0" style="width: 350px;">
+            <div class="card border-0 shadow-sm">
+              <a href="#">
+                <img 
+                  src="https://ngoteyawild.co.tz/wp-content/uploads/2023/11/nyekweri-cover.2jpg-01-min-scaled.jpg" 
+                  alt="Film 3" 
+                  class="carousel-img"
+                />
+              </a>
+            </div>
+          </div>
   
-              <div class="flex-shrink-0" style="width: 350px;">
-                <div class="card h-100">
-                  <div class="position-relative">
-                    <a href="#">
-                      <img 
-                        src="https://ngoteyawild.co.tz/wp-content/uploads/2023/11/NEW-MKOMAZI-COVER-01.jpgqq_-scaled.jpg" 
-                        alt="Image" 
-                        class="card-img-top carousel-img">
-                    </a>
-                  </div>
-                </div>
-              </div>
-  
+          <div class="flex-shrink-0" style="width: 350px;">
+            <div class="card border-0 shadow-sm">
+              <a href="#">
+                <img 
+                  src="https://ngoteyawild.co.tz/wp-content/uploads/2023/11/NEW-MKOMAZI-COVER-01.jpgqq_-scaled.jpg" 
+                  alt="Film 4" 
+                  class="carousel-img"
+                />
+              </a>
             </div>
           </div>
         </div>
       </div>
     </div>
+  
+    <!-- Scroll Scripts -->
+    <script>
+      const carousel = document.getElementById('filmsCarousel');
+      document.getElementById('filmsScrollLeft').addEventListener('click', () => {
+        carousel.scrollBy({ left: -350, behavior: 'smooth' });
+      });
+      document.getElementById('filmsScrollRight').addEventListener('click', () => {
+        carousel.scrollBy({ left: 350, behavior: 'smooth' });
+      });
+    </script>
   </section>
   
-<!-- end section -->
-<!-- start section -->
-<section class="bg-solitude-blue">
+
+  <section class="py-5 bg-light">
     <div class="container">
-        <div class="row justify-content-center mb-4">
-            <div class="col-xl-7 col-lg-9 col-md-10 text-center">
-                <h4 class="alt-font text-dark-gray fw-600 ls-minus-1px"
-                    data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                    AWARDS
-                </h4>
-            </div>
+      <!-- Section Title -->
+      <div class="row justify-content-center mb-4">
+        <div class="col-lg-8 text-center">
+          <h4 class="alt-font fw-600 mb-2" style="color: #10322c;">Visual Showcase</h4>
+          <p class="text-muted">A rich gallery of our conservation scenes and environmental stories.</p>
         </div>
-        <div class="row align-items-center"
-             data-anime='{ "el": "childs", "translateY": [0, 0], "opacity": [0,1], "duration": 1200, "delay": 150, "staggervalue": 300, "easing": "easeOutQuad" }'>
-            <div class="awards-container col-xl-9 col-lg-8 col-md-12">
-                <div class="awards-track d-flex">
-                    @foreach (range(1, 6) as $i)
-                        <div class="award-card flex-shrink-0 mx-3" style="width: 300px;">
-                            <div class="card p-4 h-100 bg-dark text-white rounded shadow-sm d-flex align-items-center justify-content-center">
-                                <img src="{{ asset('images/awards' . $i . '.png') }}" class="img-fluid" alt="Award">
-                            </div>
-                        </div>
-                    @endforeach
-
-                    <!-- Duplicate items for seamless scrolling -->
-                    @foreach (range(1, 6) as $i)
-                    <div class="award-card flex-shrink-0 mx-3" style="width: 300px;">
-                        <div class="card p-4 h-100 bg-dark text-white rounded shadow-sm d-flex align-items-center justify-content-center">
-                            <img src="{{ asset('images/awards' . $i . '.png') }}" class="img-fluid" alt="Award">
-                        </div>
-                    </div>
-                    @endforeach
-                </div>
-            </div>
+      </div>
+  
+      <!-- Full Image Grid -->
+      <div class="row g-3">
+        <!-- Loop through images -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <img src="https://picsum.photos/id/1011/600/400" class="img-fluid rounded-3 shadow-sm w-100" alt="Image 1">
         </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <img src="https://picsum.photos/id/1025/600/400" class="img-fluid rounded-3 shadow-sm w-100" alt="Image 2">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <img src="https://picsum.photos/id/1036/600/400" class="img-fluid rounded-3 shadow-sm w-100" alt="Image 3">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <img src="https://picsum.photos/id/1045/600/400" class="img-fluid rounded-3 shadow-sm w-100" alt="Image 4">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <img src="https://picsum.photos/id/1050/600/400" class="img-fluid rounded-3 shadow-sm w-100" alt="Image 5">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <img src="https://picsum.photos/id/1062/600/400" class="img-fluid rounded-3 shadow-sm w-100" alt="Image 6">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <img src="https://picsum.photos/id/1074/600/400" class="img-fluid rounded-3 shadow-sm w-100" alt="Image 7">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <img src="https://picsum.photos/id/1084/600/400" class="img-fluid rounded-3 shadow-sm w-100" alt="Image 8">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <img src="https://picsum.photos/id/1080/600/400" class="img-fluid rounded-3 shadow-sm w-100" alt="Image 9">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <img src="https://picsum.photos/id/1069/600/400" class="img-fluid rounded-3 shadow-sm w-100" alt="Image 10">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <img src="https://picsum.photos/id/1055/600/400" class="img-fluid rounded-3 shadow-sm w-100" alt="Image 11">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <img src="https://picsum.photos/id/1049/600/400" class="img-fluid rounded-3 shadow-sm w-100" alt="Image 12">
+        </div>
+      </div>
     </div>
-</section>
+  </section>
+  
+  
+  
+  
 
 <!-- end section -->
 <!-- start section -->
-<section class="pb-0">
+
+
+<section class="py-5 bg-white border-top">
     <div class="container">
-        <div class="row align-items-center justify-content-center">
-            <div class="col-xl-12 col-lg-12 md-mb-50px text-center text-lg-start" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                <span class="bg-solitude-blue text-uppercase fs-13 ps-25px pe-25px alt-font fw-600 text-base-color lh-40 sm-lh-55 border-radius-100px d-inline-block mb-25px">PROJECTS</span>
-                <h4 class="alt-font text-dark-gray fw-600 ls-minus-1px text-center">LATEST PROJECTS</h4>
-            </div>
-
-            <div class="col-xl-12 col-lg-12 position-relative">
-                <div class="row">
-                    <!-- Image 1 -->
-                    <div class="col-md-4">
-                        <div class="project-card">
-                            <div class="position-relative overflow-hidden">
-                                <a href="">
-                                    <img src="https://ngoteyawild.co.tz/wp-content/uploads/2024/07/ola-and-owl-01-1024x576.jpg" class="card-img-top" alt="Project 1">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Video 1 -->
-                    <div class="col-md-4">
-                        <div class="project-card">
-                            <div class="position-relative overflow-hidden">
-                                <a href="">
-                                    <iframe class="elementor-video-iframe" allowfullscreen allow="clipboard-write" title="vimeo Video Player" src="https://player.vimeo.com/video/841474245?color&amp;autopause=0&amp;loop=0&amp;muted=0&amp;title=1&amp;portrait=1&amp;byline=1&amp;h=97cd098c68#t="></iframe>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Video 2 -->
-                    <div class="col-md-4">
-                        <div class="project-card">
-                            <div class="position-relative overflow-hidden">
-                                <a href="">
-                                    <iframe class="elementor-video-iframe" allowfullscreen allow="clipboard-write" title="vimeo Video Player" src="https://player.vimeo.com/video/839285703?color&amp;autopause=0&amp;loop=0&amp;muted=0&amp;title=1&amp;portrait=1&amp;byline=1#t="></iframe>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <!-- Section Header -->
+      <div class="row justify-content-center mb-4">
+        <div class="col-lg-8 text-center">
+          <h4 class="alt-font fw-600 mb-2" style="color: #10322c;">Our Clients</h4>
+          <p class="text-muted">We proudly collaborate with organizations worldwide.</p>
         </div>
-    </div>
-</section>
-
-
-<!-- end section -->
-<!-- start section -->
-<section class="overflow-hidden">
-    <div class="container">
-        <div class="row justify-content-center">
-            <h4 class="alt-font text-dark-gray fw-600 ls-minus-1px text-center">UPCOMING PROJECTS</h4>
-            <div class="col-12">
-                <div class="border-radius-6px h-500px md-h-450px sm-h-350px d-flex align-items-center justify-content-center overflow-hidden cover-background skrollr-zoom pb-9 xs-pb-12" 
-                    style="background-image: url('https://ngoteyawild.co.tz/wp-content/uploads/2024/07/twiga-01-1-scaled.jpg'); background-size: contain; background-position: center; background-repeat: no-repeat;" 
-                    data-bottom-top="transform:scale(1.2, 1.2) translateY(30px);" data-top-bottom="transform:scale(1, 1) translateY(-30px);">
-                    
-                    <div class="row justify-content-center">
-                        <div class="col-xl-5 col-lg-3 position-relative z-index-1 text-center animation-zoom">
-                            <!-- Your content here (e.g., title, button, etc.) -->
-                        </div>
-                    </div>
-                </div>
-            </div>
+      </div>
+  
+      <!-- Dummy Client Logos Grid -->
+      <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 g-4 justify-content-center align-items-center text-center">
+        <div class="col">
+          <img src="https://picsum.photos/seed/logo1/150/60" alt="Client 1" class="img-fluid rounded shadow-sm" style="object-fit: contain;">
         </div>
+        <div class="col">
+          <img src="https://picsum.photos/seed/logo2/150/60" alt="Client 2" class="img-fluid rounded shadow-sm" style="object-fit: contain;">
+        </div>
+        <div class="col">
+          <img src="https://picsum.photos/seed/logo3/150/60" alt="Client 3" class="img-fluid rounded shadow-sm" style="object-fit: contain;">
+        </div>
+        <div class="col">
+          <img src="https://picsum.photos/seed/logo4/150/60" alt="Client 4" class="img-fluid rounded shadow-sm" style="object-fit: contain;">
+        </div>
+        <div class="col">
+          <img src="https://picsum.photos/seed/logo5/150/60" alt="Client 5" class="img-fluid rounded shadow-sm" style="object-fit: contain;">
+        </div>
+        <div class="col">
+          <img src="https://picsum.photos/seed/logo6/150/60" alt="Client 6" class="img-fluid rounded shadow-sm" style="object-fit: contain;">
+        </div>
+      </div>
     </div>
-</section>
-
+  </section>
+  
+  
 
 
 
@@ -296,168 +317,7 @@
 
 <!-- end section -->
 <!-- start section -->
-<section class="bg-gradient-solitude-blue-transparent pt-0">
-    <div class="container">
-        <div class="row justify-content-center align-items-center" data-anime='{ "el": "childs", "translateX": [0, 0], "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 300, "easing": "easeOutQuad" }'>
-            <div class="col-4 col-lg-2 col-sm-3 xs-mb-25px">
-                <div class="swiper rounded-circle" data-slider-options='{ "slidesPerView": 1, "loop": true, "autoplay": { "delay": 1000, "disableOnInteraction": false },  "keyboard": { "enabled": true, "onlyInViewport": true }, "effect": "fade" }'>
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="https://via.placeholder.com/200x200" alt=""/>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://via.placeholder.com/200x200" alt=""/>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://via.placeholder.com/200x200" alt=""/>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://via.placeholder.com/200x200" alt=""/>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://via.placeholder.com/200x200" alt=""/>
-                        </div> 
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-5 col-xl-4 col-md-6 col-sm-7 text-center text-sm-start">
-                <h5 class="alt-font text-dark-gray lh-40 fw-500 ls-minus-1px mb-0 ms-10px lg-ms-0" data-anime='{ "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 500, "staggervalue": 300, "easing": "easeOutQuad" }'>Trusted by <span class="fw-700 text-base-color">25,000+</span> happy customers are using crafto.</h5>
-            </div>
-            <div class="col-xl-2 offset-xl-2 col-lg-3 col-sm-4 md-mt-35px text-center text-lg-start">
-                <h2 class="alt-font text-dark-gray fw-700 ls-minus-3px mb-5px" data-anime='{ "el": "lines", "translateY": [15, 0], "opacity": [0,1], "delay": 300, "staggervalue": 100, "easing": "easeOutQuad" }'>200+</h2>
-                <span class="text-dark-gray fw-500 lh-24 d-inline-block w-90 lg-w-80 sm-w-100" data-anime='{ "el": "lines", "translateY": [15, 0], "opacity": [0,1], "delay": 400, "staggervalue": 100, "easing": "easeOutQuad" }'>Creative team to care for projects.</span>
-            </div>
-            <div class="col-lg-2 col-sm-4 ps-40px md-ps-15px md-mt-35px text-center text-lg-start">
-                <h2 class="alt-font text-dark-gray fw-700 ls-minus-3px mb-5px" data-anime='{ "translateY": [15, 0], "opacity": [0,1], "delay": 100, "staggervalue": 100, "easing": "easeOutQuad" }'>4.9</h2>
-                <div class="review-star-icon fs-17 lh-20 d-block" data-anime='{ "translateY": [15, 0], "opacity": [0,1], "delay": 200, "staggervalue": 100, "easing": "easeOutQuad" }'>
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <span class="text-dark-gray fw-500" data-anime='{ "el": "lines", "translateY": [15, 0], "opacity": [0,1], "delay": 300, "staggervalue": 100, "easing": "easeOutQuad" }'>2,488 Rating</span>
-            </div>
-        </div>
-        <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 justify-content-center mt-4 sm-mt-40px" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 300, "easing": "easeOutQuad" }'>
-            <!-- start testimonials item -->
-            <div class="col testimonials-style-01 md-mb-30px">
-                <div class="position-relative bg-white testimonial-arrow ps-50px pe-50px pt-30px pb-30px lg-p-30px border-radius-10px box-shadow-quadruple-large">
-                    <span>Lorem ipsum dolor amet ipsum adipiscing elit eiusmod tempor lorem ipsum incididunt.</span>
-                </div>
-                <div class="mt-10px pt-20px pb-20px ps-15px pe-15px">
-                    <img src="{{ asset('images/user_avatar.png') }}" class="w-80px h-80px rounded-circle me-15px" alt="" />
-                    <div class="d-inline-block align-middle lh-20">
-                        <div class="fw-500 text-dark-gray alt-font mb-5px">Herman miller</div>
-                        <span class="fs-15">Chief financial</span>
-                    </div>
-                </div>
-            </div>
-            <!-- end testimonials item -->                            
-            <!-- start testimonials item -->
-            <div class="col testimonials-style-01 md-mb-30px">
-                <div class="position-relative bg-white testimonial-arrow ps-50px pe-50px pt-30px pb-30px lg-p-30px border-radius-10px box-shadow-quadruple-large">
-                    <span>Lorem ipsum dolor amet ipsum adipiscing elit eiusmod tempor lorem ipsum incididunt.</span>
-                </div>
-                <div class="mt-10px pt-20px pb-20px ps-15px pe-15px">
-                    <img src="{{ asset('images/user_avatar.png') }}" class="w-80px h-80px rounded-circle me-15px" alt="" />
-                    <div class="d-inline-block align-middle lh-20">
-                        <div class="fw-500 text-dark-gray alt-font mb-5px">Shoko mugikura</div>
-                        <span class="fs-15">Financial manager</span>
-                    </div>
-                </div>
-            </div>
-            <!-- end testimonials item -->
-            <!-- start testimonials item -->
-            <div class="col testimonials-style-01">
-                <div class="position-relative bg-white testimonial-arrow ps-50px pe-50px pt-30px pb-30px lg-p-30px border-radius-10px box-shadow-quadruple-large">
-                    <span>Lorem ipsum dolor amet ipsum adipiscing elit eiusmod tempor lorem ipsum incididunt.</span>
-                </div>
-                <div class="mt-10px pt-20px pb-20px ps-15px pe-15px">
-                    <img src="{{ asset('images/user_avatar.png') }}" class="w-80px h-80px rounded-circle me-15px" alt="" />
-                    <div class="d-inline-block align-middle lh-20">
-                        <div class="fw-500 text-dark-gray alt-font mb-5px">Matthew taylor</div>
-                        <span class="fs-15">Office manager</span>
-                    </div>
-                </div>
-            </div>
-            <!-- end testimonials item -->
-        </div>
-    </div>
-</section>
-<!-- end section -->
-<!-- start section -->
-
-<section class="position-relative overflow-hidden sm-pb-20px"> 
-    <div class="separator-line-9px bg-base-color position-absolute top-0px right-0px" data-bottom-top="width: 15%" data-center-top="width: 50%;"></div>
-    <div class="container">
-        <div class="row justify-content-center mb-2">
-            <div class="col-xl-7 col-lg-9 col-md-10 text-center">
-                <span class="bg-solitude-blue text-uppercase fs-13 ps-25px pe-25px alt-font fw-600 text-base-color lh-40 sm-lh-55 border-radius-100px d-inline-block mb-25px" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>Latest news</span>
-                <h3 class="alt-font text-dark-gray fw-600 ls-minus-1px" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>Stay updated with the latest trends and business news</h3>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 px-md-0">
-                <ul class="blog-classic blog-wrapper grid-loading grid grid-4col xl-grid-4col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col gutter-extra-large" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                    <li class="grid-sizer"></li>
-                    <!-- start blog item -->
-                    <li class="grid-item">
-                        <div class="card bg-transparent border-0 h-100">
-                            <div class="blog-image position-relative overflow-hidden border-radius-6px">
-                                <a href="demo-business-blog-single-modern.html"><img src="https://via.placeholder.com/600x430" alt="" /></a>
-                            </div>
-                            <div class="card-body px-0 pb-30px pt-30px xs-pb-15px">
-                                <span class="fs-14 text-uppercase mb-5px d-block"><a href="demo-business-blog.html" class="text-dark-gray fw-600 categories-text">Business</a><a href="#" class="blog-date">26 August 2023</a></span>
-                                <a href="demo-business-blog-single-modern.html" class="card-title mb-0 fw-500 fs-18 lh-30 text-dark-gray d-inline-block">The best way to predict the secure future is to create it</a>
-                            </div>
-                        </div>
-                    </li>
-                    <!-- end blog item -->
-                    <!-- start blog item -->
-                    <li class="grid-item">
-                        <div class="card bg-transparent border-0 h-100">
-                            <div class="blog-image position-relative overflow-hidden border-radius-6px">
-                                <a href="demo-business-blog-single-modern.html"><img src="https://via.placeholder.com/600x430" alt="" /></a>
-                            </div>
-                            <div class="card-body px-0 pb-30px pt-30px xs-pb-15px">
-                                <span class="fs-14 text-uppercase mb-5px d-block"><a href="demo-business-blog.html" class="text-dark-gray fw-600 categories-text">marketing</a><a href="#" class="blog-date">24 August 2023</a></span>
-                                <a href="demo-business-blog-single-modern.html" class="card-title mb-0 fw-500 fs-18 lh-30 text-dark-gray d-inline-block">Recognizing the need is the primary condition for design</a>
-                            </div>
-                        </div>
-                    </li>
-                    <!-- end blog item -->
-                    <!-- start blog item -->
-                    <li class="grid-item">
-                        <div class="card bg-transparent border-0 h-100">
-                            <div class="blog-image position-relative overflow-hidden border-radius-6px">
-                                <a href="demo-business-blog-single-modern.html"><img src="https://via.placeholder.com/600x430" alt="" /></a>
-                            </div>
-                            <div class="card-body px-0 pb-30px pt-30px xs-pb-15px">
-                                <span class="fs-14 text-uppercase mb-5px d-block"><a href="demo-business-blog.html" class="text-dark-gray fw-600 categories-text">Design</a><a href="#" class="blog-date">22 August 2023</a></span>
-                                <a href="demo-business-blog-single-modern.html" class="card-title mb-0 fw-500 fs-18 lh-30 text-dark-gray d-inline-block">Make business easy with beautiful application store</a>
-                            </div>
-                        </div>
-                    </li>
-                    <!-- end blog item -->
-                    <!-- start blog item -->
-                    <li class="grid-item">
-                        <div class="card bg-transparent border-0 h-100">
-                            <div class="blog-image position-relative overflow-hidden border-radius-6px">
-                                <a href="demo-business-blog-single-modern.html"><img src="https://via.placeholder.com/600x430" alt="" /></a>
-                            </div>
-                            <div class="card-body px-0 pb-30px pt-30px xs-pb-15px">
-                                <span class="fs-14 text-uppercase mb-5px d-block"><a href="demo-business-blog.html" class="text-dark-gray fw-600 categories-text">Business</a><a href="#" class="blog-date">20 August 2023</a></span>
-                                <a href="demo-business-blog-single-modern.html" class="card-title mb-0 fw-500 fs-18 lh-30 text-dark-gray d-inline-block">Computers are to design as microwaves are to cooking</a>
-                            </div>
-                        </div>
-                    </li>
-                    <!-- end blog item --> 
-                </ul>
-            </div>
-        </div>
-    </div>
-</section> 
-
-<!-- end section -->
-<!-- start section -->
-<section class="bg-dark-slate-blue pt-4 pb-4 lg-pt-6 lg-pb-6" data-parallax-background-ratio="0.5" style="background-image: url('https://via.placeholder.com/1920x1100')" data-anime='{ "translateX": [0, 0], "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 300, "easing": "easeOutQuad" }'>
+{{-- <section class="bg-dark-slate-blue pt-4 pb-4 lg-pt-6 lg-pb-6" data-parallax-background-ratio="0.5" style="background-image: url('https://via.placeholder.com/1920x1100')" data-anime='{ "translateX": [0, 0], "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 300, "easing": "easeOutQuad" }'>
     <div class="opacity-medium bg-dark-slate-blue"></div>
     <div class="container z-index-1 position-relative"> 
         <div class="row align-items-center justify-content-center">
@@ -468,7 +328,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 <!-- end section -->
 <!-- start subscription popup -->
 
