@@ -66,6 +66,35 @@
     <!-- Custom js for this page-->
     <script src="{{asset('admin/assets/js/jquery.cookie.js')}}" type="text/javascript"></script>
     <script src="{{asset('admin/assets/js/dashboard.js')}}"></script>
+    <!-- SweetAlert CSS and JS -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+@if (session('success'))
+  swal.fire({
+  toast: true,
+  position: 'top-end',
+  text: '{{ session('success') }}',
+  icon: 'success', // For success messages
+  showConfirmButton: false,
+  timer: 5000,
+    });
+@endif
+
+@if (session('error'))
+  swal.fire({
+  toast: true,
+  position: 'top-end',
+  text: '{{ session('error') }}',
+  icon: 'error', // For error messages
+  showConfirmButton: false,
+  timer: 5000,
+  });
+@endif
+
+      
+</script>
+
     @yield('scripts')
 
 </body>

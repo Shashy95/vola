@@ -1,10 +1,24 @@
 <?php
 
+use App\Http\Controllers\ClientController;
+use App\Http\Controllers\FilmController;
+use App\Http\Controllers\GalleryImageController;
+use App\Http\Controllers\HeroVideoController;
 use App\Http\Controllers\HomeController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Models\Film;
+use App\Models\Client;
+use App\Models\GalleryImage;
+use App\Models\HeroVideo;
 
 Route::get('/', function () {
-    return view('pages.home');
+    $video = HeroVideo::first(); // Assuming only 1 hero video
+    $films = Film::all(); // Fetch all films
+    $clients = Client::all(); // Fetch all clients
+    $gallery = GalleryImage::all(); // Fetch all gallery images
+
+return view('pages.home', compact('video', 'films', 'clients', 'gallery'));
 })->name('home');
 
 Route::get('/about', function () {
@@ -19,7 +33,7 @@ Route::get('/contact', function () {
     return view('pages.contact');
 })->name('contact');
 
-
+Auth::routes();
 
 // All admin routes protected by auth middleware
 Route::middleware(['auth'])->prefix('admin')->group(function () {
@@ -38,11 +52,9 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
     Route::resource('clients', ClientController::class);
 
     // Gallery Images
-    Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery.index');
-    Route::post('/gallery', [GalleryController::class, 'store'])->name('gallery.store');
-    Route::delete('/gallery/{id}', [GalleryController::class, 'destroy'])->name('gallery.destroy');
+    Route::get('/gallery', [GalleryImageController::class, 'index'])->name('gallery.index');
+    Route::post('/gallery', [GalleryImageController::class, 'store'])->name('gallery.store');
+    Route::delete('/gallery/{id}', [GalleryImageController::class, 'destroy'])->name('gallery.destroy');
 });
 
-Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
