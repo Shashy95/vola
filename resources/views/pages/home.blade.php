@@ -226,42 +226,12 @@
       <!-- Full Image Grid -->
       <div class="row g-3">
         <!-- Loop through images -->
+        @foreach ($gallery as $image )
         <div class="col-6 col-md-4 col-lg-3">
-          <img src="https://picsum.photos/id/1011/600/400" class="img-fluid rounded-3 shadow-sm w-100 equal-image" alt="Image 1">
+          <img src="{{ asset($image->image_path) }}" class="img-fluid rounded-3 shadow-sm w-100 equal-image" alt="Image 1" style="height: 250px; object-fit: cover;">
         </div>
-        <div class="col-6 col-md-4 col-lg-3">
-          <img src="https://picsum.photos/id/1025/600/400" class="img-fluid rounded-3 shadow-sm w-100 equal-image" alt="Image 2">
-        </div>
-        <div class="col-6 col-md-4 col-lg-3">
-          <img src="https://picsum.photos/id/1036/600/400" class="img-fluid rounded-3 shadow-sm w-100 equal-image" alt="Image 3">
-        </div>
-        <div class="col-6 col-md-4 col-lg-3">
-          <img src="https://picsum.photos/id/1045/600/400" class="img-fluid rounded-3 shadow-sm w-100" alt="Image 4">
-        </div>
-        <div class="col-6 col-md-4 col-lg-3">
-          <img src="https://picsum.photos/id/1050/600/400" class="img-fluid rounded-3 shadow-sm w-100" alt="Image 5">
-        </div>
-        <div class="col-6 col-md-4 col-lg-3">
-          <img src="https://picsum.photos/id/1062/600/400" class="img-fluid rounded-3 shadow-sm w-100" alt="Image 6">
-        </div>
-        <div class="col-6 col-md-4 col-lg-3">
-          <img src="https://picsum.photos/id/1074/600/400" class="img-fluid rounded-3 shadow-sm w-100" alt="Image 7">
-        </div>
-        <div class="col-6 col-md-4 col-lg-3">
-          <img src="https://picsum.photos/id/1084/600/400" class="img-fluid rounded-3 shadow-sm w-100" alt="Image 8">
-        </div>
-        <div class="col-6 col-md-4 col-lg-3">
-          <img src="https://picsum.photos/id/1080/600/400" class="img-fluid rounded-3 shadow-sm w-100" alt="Image 9">
-        </div>
-        <div class="col-6 col-md-4 col-lg-3">
-          <img src="https://picsum.photos/id/1069/600/400" class="img-fluid rounded-3 shadow-sm w-100" alt="Image 10">
-        </div>
-        <div class="col-6 col-md-4 col-lg-3">
-          <img src="https://picsum.photos/id/1055/600/400" class="img-fluid rounded-3 shadow-sm w-100" alt="Image 11">
-        </div>
-        <div class="col-6 col-md-4 col-lg-3">
-          <img src="https://picsum.photos/id/1049/600/400" class="img-fluid rounded-3 shadow-sm w-100" alt="Image 12">
-        </div>
+        @endforeach
+        
       </div>
     </div>
   </section>

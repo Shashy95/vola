@@ -2,6 +2,7 @@
 /node_modules
 /public/build
 /public/hero
+/public/gallery
 /public/hot
 /public/storage
 /storage/*.key
