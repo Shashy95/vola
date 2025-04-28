@@ -117,8 +117,6 @@
         <script type="text/javascript" src="{{ asset('js/jquery.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/vendors.min.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
-        {{asset('admin/assets/vendors/owl-carousel-2/owl.theme.default.min.css')}}"
-
         <script type="text/javascript" src="{{asset('admin/assets/vendors/owl-carousel-2/owl.carousel.min.js')}}"></script>
         <script type="text/javascript" src="{{asset('admin/assets/js/owl-carousel.js')}}"></script>
 
