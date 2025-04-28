@@ -2,63 +2,94 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\UploadHelper;
+use App\Models\Film;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class FilmController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        //
+        $films = Film::latest()->get();
+        return view('admin.pages.films.index', compact('films'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
-        //
+        return view('admin.pages.films.form');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title' => 'required|string|max:255',
+            'description' => 'nullable|string',
+            'thumbnail' => 'required|image|mimes:jpeg,png,jpg,webp|max:2048',
+            'video_path' => 'nullable|string',
+        ]);
+
+        
+
+        $film = new Film();
+        $film->title = $request->title;
+        $film->description = $request->description;
+        $film->video_path = $request->video_path;
+
+        if ($request->hasFile('thumbnail')) {
+            $film->thumbnail = UploadHelper::uploadPublicFile($request->file('thumbnail'), 'films');
+        }
+
+       
+
+        $film->save();
+
+        return redirect()->route('films.index')->with('success', 'Film created successfully.');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
+    public function edit(Film $film)
     {
-        //
+        return view('admin.pages.films.form', compact('film'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
+    public function update(Request $request, Film $film)
     {
-        //
+        $request->validate([
+            'title' => 'required|string|max:255',
+            'description' => 'nullable|string',
+            'thumbnail' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
+            'video_path' => 'nullable|string',
+        ]);
+
+        $film->title = $request->title;
+        $film->description = $request->description;
+        $film->video_path = $request->video_path;
+
+
+        if ($request->hasFile('thumbnail')) {
+            // Delete old file manually from public/
+            if ($film->thumbnail && file_exists(public_path($film->thumbnail))) {
+                unlink(public_path($film->thumbnail));
+            }
+        
+            // Upload new file to public/films/thumbnails
+            $film->thumbnail = UploadHelper::uploadPublicFile($request->file('thumbnail'), 'films');
+        }        
+
+
+        $film->save();
+
+        return redirect()->route('films.index')->with('success', 'Film updated successfully.');
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
+    public function destroy(Film $film)
     {
-        //
-    }
+        if ($film->thumbnail && file_exists(public_path($film->thumbnail))) {
+            unlink(public_path($film->thumbnail));
+        }
+       
+        $film->delete();
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
+        return redirect()->route('films.index')->with('success', 'Film deleted successfully.');
     }
 }

@@ -24,93 +24,78 @@
         <link rel="stylesheet" href="{{ asset('css/responsive.css') }}"/>
         <link rel="stylesheet" href="{{ asset('css/business.css') }}" />
 
+        <link rel="stylesheet" href="{{asset('admin/assets/vendors/owl-carousel-2/owl.carousel.min.css')}}">
+        <link rel="stylesheet" href="{{asset('admin/assets/vendors/owl-carousel-2/owl.theme.default.min.css')}}">
+
+
         <style>
-            
-          /* Hide scrollbars but keep functionality */
-          #filmsCarousel::-webkit-scrollbar,
-          #awardsCarousel::-webkit-scrollbar {
-              display: none; /* For Chrome, Safari and Opera */
-          }
-          
-          #filmsCarousel,
-          #awardsCarousel {
-              -ms-overflow-style: none;  /* IE and Edge */
-              scrollbar-width: none;  /* Firefox */
-          }
-          
-          /* Continuous scrolling for awards section */
-          .awards-container {
-              position: relative;
-              overflow: hidden;
-              width: 100%;
-              padding: 20px 0;
-          }
-          
-          .awards-track {
-              display: flex;
-              width: calc(300px * 12); /* 6 items * 2 (duplicated) * width */
-              animation: scroll 30s linear infinite;
-          }
-          
-          @keyframes scroll {
-              0% { transform: translateX(0); }
-              100% { transform: translateX(calc(-300px * 6)); } /* Half of total width */
-          }
-          
-          /* Pause animation on hover */
-          .awards-container:hover .awards-track {
-              animation-play-state: paused;
-          }
-          
-          /* Button styling for scroll controls */
-          button[id^="scroll"],
-          button[id^="filmsScroll"] {
-              background-color: rgba(255, 255, 255, 0.8) !important;
-              color: #212529 !important;
-              border-radius: 50%;
-              width: 45px;
-              height: 45px;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-              transition: transform 0.2s ease, background-color 0.2s ease !important;
-              z-index: 10;
-          }
-      
-          button[id^="scroll"]:hover,
-          button[id^="filmsScroll"]:hover {
-              transform: scale(1.05);
-              background-color: rgba(255, 255, 255, 0.9) !important;
-          }
 
-          .project-card {
-        /* Makes sure both the image and iframe are the same size */
-        overflow: hidden;
-        border-radius: 8px;
-    }
+                        /* Owl-carousel */
+            .owl-carousel img {
+                border-radius: 4px;
+            }
+            .owl-carousel.full-width .owl-nav {
+                position: absolute;
+                top: 30%;
+                width: 100%;
+                margin-top: 0;
+            }
+            .owl-carousel.full-width .owl-nav .owl-prev,
+            .owl-carousel.full-width .owl-nav .owl-next {
+                background: transparent;
+                color: #ffffff;
+            }
+            .owl-carousel.full-width .owl-nav .owl-prev i:before,
+            .owl-carousel.full-width .owl-nav .owl-next i:before {
+                width: 60px;
+                height: 60px;
+                background: rgba(0, 0, 0, 0.5);
+                border-radius: 100%;
+                font-size: 1.875rem;
+                font-weight: bold;
+                line-height: 2;
+                display: block;
+            }
+            .owl-carousel.full-width .owl-nav .owl-prev {
+                float: left;
+            }
+            .owl-carousel.full-width .owl-nav .owl-next {
+                float: right;
+            }
+            .owl-carousel.full-width .owl-dots {
+                margin-top: 1rem;
+            }
+            .owl-carousel .item-video {
+                width: 200px;
+                height: 200px;
+            }
+                    
 
-    /* Ensures that both images and iframes cover their container equally */
-    .project-card img, 
-    .elementor-video-iframe {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;  /* Ensures both fit into the container */
-    }
+            .project-card {
+            /* Makes sure both the image and iframe are the same size */
+            overflow: hidden;
+            border-radius: 8px;
+            }
 
-    .elementor-video-iframe {
-        border: none; /* Removes border around the iframe */
-        min-height: 220px;  /* Sets a minimum height to ensure consistency */
-    }
+            /* Ensures that both images and iframes cover their container equally */
+            .project-card img, 
+            .elementor-video-iframe {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;  /* Ensures both fit into the container */
+            }
 
-    /* Container for both image and video */
-    .project-card .position-relative {
-        height: 220px;  /* Ensures both the image and iframe have the same height */
-    }
+            .elementor-video-iframe {
+                border: none; /* Removes border around the iframe */
+                min-height: 220px;  /* Sets a minimum height to ensure consistency */
+            }
+
+            /* Container for both image and video */
+            .project-card .position-relative {
+                height: 220px;  /* Ensures both the image and iframe have the same height */
+            }
 
       </style>
-      
-      
 
         @yield('styles')
     </head>
@@ -132,6 +117,12 @@
         <script type="text/javascript" src="{{ asset('js/jquery.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/vendors.min.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
+        {{asset('admin/assets/vendors/owl-carousel-2/owl.theme.default.min.css')}}"
+
+        <script type="text/javascript" src="{{asset('admin/assets/vendors/owl-carousel-2/owl.carousel.min.js')}}"></script>
+        <script type="text/javascript" src="{{asset('admin/assets/js/owl-carousel.js')}}"></script>
+
+
         @yield('scripts')
     </body>
 </html>

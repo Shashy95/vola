@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\UploadHelper;
 use App\Models\GalleryImage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
@@ -33,28 +34,21 @@ class GalleryImageController extends Controller
     {
         //
         $request->validate([
-            'images' => 'required|array', // Ensure it’s an array of images
-            'images.*' => 'image|max:2048', // Validate each image in the array
+            'images' => 'required|array', 
+            'images.*' => 'image|mimes:jpeg,png,jpg,webp|max:2048', 
         ]);
 
-        // Loop through each uploaded image and store them
-        foreach ($request->file('images') as $image) {
-            // Define the file path and move it to the 'public/gallery' directory
-            $imagePath = 'gallery/' . uniqid() . '.' . $image->getClientOriginalExtension();
-            $destinationPath = public_path('gallery');
-
-            // Create the folder if not exists
-            if (!file_exists($destinationPath)) {
-                mkdir($destinationPath, 0755, true);
+     
+        if ($request->hasFile('images')) {
+            foreach ($request->file('images') as $image) {
+                $imagePath = UploadHelper::uploadPublicFile($image, 'gallery');
+                
+                $galleryImage = new GalleryImage();
+                $galleryImage->image_path = $imagePath;
+                $galleryImage->save();
             }
-
-            $image->move(public_path('gallery'), $imagePath); // Move image to public/gallery folder
-
-            // Store the image path in the database
-            $galleryImage = new GalleryImage();
-            $galleryImage->image_path = $imagePath;
-            $galleryImage->save();
         }
+        
 
         return back()->with('success', 'Gallery images uploaded successfully!');
        

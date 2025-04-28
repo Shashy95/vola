@@ -13,7 +13,7 @@
     @csrf
     <div class="form-group">
         <label for="images">Upload Images</label>
-        <input type="file" name="images[]" id="images" class="form-control" multiple>
+        <input type="file" name="images[]" id="images" class="form-control @error('images') is-invalid @enderror" multiple>
         @error('images')
         <div class="invalid-feedback">
             {{ $message }}
@@ -34,7 +34,7 @@
                     <form action="{{ route('gallery.destroy', $image->id) }}" method="POST" class="delete-form">
                         @csrf
                         @method('DELETE')
-                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                        <button type="submit" class="btn btn-danger btn-sm text-white">Delete</button>
                     </form>
                 </div>
             </div>
@@ -52,7 +52,6 @@
 @endsection
 
 @section('scripts')
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
     // Attach event listener to all delete forms
     document.querySelectorAll('.delete-form').forEach(form => {

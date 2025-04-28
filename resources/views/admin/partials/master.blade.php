@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="{{asset('admin/assets/vendors/mdi/css/materialdesignicons.min.css')}}">
     <!-- endinject -->
     <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="{{asset('admin/assets/vendors/datatables.net-bs5/dataTables.bootstrap5.css')}}">
     <link rel="stylesheet" href="{{asset('admin/assets/vendors/ti-icons/css/themify-icons.css')}}">
     <link rel="stylesheet" href="{{asset('admin/assets/js/select.dataTables.min.css')}}">
     <!-- End plugin css for this page -->
@@ -55,6 +56,9 @@
     <script type="text/javascript" src="{{ asset('js/jquery.js') }}"></script>
     <script src="{{asset('admin/assets/vendors/js/vendor.bundle.base.js')}}"></script>
     <script src="{{asset('admin/assets/vendors/chart.js/chart.umd.js')}}"></script>
+    <script src="{{asset('admin/assets/vendors/datatables.net-bs5/jquery.dataTables.js')}}"></script>
+    <script src="{{asset('admin/assets/vendors/datatables.net-bs5/dataTables.bootstrap5.js')}}"></script>
+
     <script src="{{asset('admin/assets/js/dataTables.select.min.js')}}"></script>
     <!-- End plugin js for this page -->
     <!-- inject:js -->
@@ -66,6 +70,7 @@
     <!-- Custom js for this page-->
     <script src="{{asset('admin/assets/js/jquery.cookie.js')}}" type="text/javascript"></script>
     <script src="{{asset('admin/assets/js/dashboard.js')}}"></script>
+    <script src="{{asset('admin/assets/js/data-table.js')}}"></script>
     <!-- SweetAlert CSS and JS -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
@@ -91,8 +96,29 @@
   timer: 5000,
   });
 @endif
+     
+</script>
 
-      
+<script>
+  // Attach event listener to all delete forms
+  document.querySelectorAll('.delete-form').forEach(form => {
+      form.addEventListener('submit', function(e) {
+          e.preventDefault(); // Prevent form from submitting immediately
+          Swal.fire({
+              title: 'Are you sure?',
+              text: "You won't be able to revert this!",
+              icon: 'warning',
+              showCancelButton: true,
+              confirmButtonColor: '#3085d6',
+              cancelButtonColor: '#d33',
+              confirmButtonText: 'Yes, delete it!'
+          }).then((result) => {
+              if (result.isConfirmed) {
+                  form.submit(); // Submit the form if user confirms
+              }
+          });
+      });
+  });
 </script>
 
     @yield('scripts')

@@ -13,10 +13,10 @@ use App\Models\GalleryImage;
 use App\Models\HeroVideo;
 
 Route::get('/', function () {
-    $video = HeroVideo::first(); // Assuming only 1 hero video
-    $films = Film::all(); // Fetch all films
-    $clients = Client::all(); // Fetch all clients
-    $gallery = GalleryImage::all(); // Fetch all gallery images
+    $video = HeroVideo::first(); 
+    $films = Film::all();
+    $clients = Client::all(); 
+    $gallery = GalleryImage::all(); 
 
 return view('pages.home', compact('video', 'films', 'clients', 'gallery'));
 })->name('home');

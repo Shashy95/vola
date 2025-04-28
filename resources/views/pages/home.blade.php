@@ -92,124 +92,44 @@
 <!-- end section -->
 <!-- start section -->
 <section class="pb-8 md:pb-17 xs:pb-28 bg-light position-relative">
-    <style>
-      .carousel-img {
-        height: 500px;
-        object-fit: cover;
-        width: 100%;
-        border-radius: 12px;
-      }
-  
-      #filmsCarousel {
-        scroll-snap-type: x mandatory;
-      }
-  
-      #filmsCarousel > div {
-        scroll-snap-align: start;
-      }
-  
-      .carousel-btn {
-        background-color: #ffffff;
-        color: #10322c;
-        border: 2px solid #10322c;
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      }
-  
-      .carousel-btn:hover {
-        background-color: #10322c;
-        color: white;
-      }
-    </style>
-  
-    <div class="container">
-      <!-- Section Heading -->
-      <div class="row justify-content-center mb-5">
+ 
+  <div class="container">
+    <!-- Section Heading -->
+    <div class="row justify-content-center mb-5">
         <div class="col-xl-8 text-center">
             <h4 class="alt-font fw-600 mb-2" style="color: #10322c;">Explore Our Conservation Films</h4>
-          <p class="text-muted mb-0">Powerful stories captured from the wild. Scroll through our collection of immersive documentaries and visual campaigns.</p>
+            <p class="text-muted mb-0">Powerful stories captured from the wild. Scroll through our collection of immersive documentaries and visual campaigns.</p>
         </div>
-      </div>
-  
-      <!-- Carousel -->
-      <div class="position-relative">
-        <!-- Navigation Buttons -->
-        <button class="carousel-btn position-absolute top-50 start-0 translate-middle-y z-2" id="filmsScrollLeft" aria-label="Scroll Left">
-          <i class="bi bi-chevron-left"></i>
-        </button>
-        <button class="carousel-btn position-absolute top-50 end-0 translate-middle-y z-2" id="filmsScrollRight" aria-label="Scroll Right">
-          <i class="bi bi-chevron-right"></i>
-        </button>
-  
-        <!-- Scrollable Cards -->
-        <div class="d-flex overflow-auto px-5" id="filmsCarousel" style="gap: 1.5rem; scroll-behavior: smooth;">
-          <!-- Carousel Item -->
-          <div class="flex-shrink-0" style="width: 350px;">
-            <div class="card border-0 shadow-sm">
-              <a href="#">
+    </div>
+
+
+  <div class="row grid-margin">
+    <div class="col-lg-12">
+      <div class="">
+        <div class="">
+          <div class="owl-carousel owl-theme full-width">
+            @foreach ($films as $film)
+            <div class="item" style="width: 350px;">
+              <a href="{{ asset($film->video_path) }}">
                 <img 
-                  src="https://ngoteyawild.co.tz/wp-content/uploads/2023/11/closure-covers-03-scaled.jpg" 
-                  alt="Film 1" 
-                  class="carousel-img"
+                    src="{{ asset($film->thumbnail) ?: asset('images/default-thumbnail.jpg') }}" 
+                    alt="Film Thumbnail" 
+                    class="carousel-img"
                 />
-              </a>
+            </a>
             </div>
-          </div>
-  
-          <div class="flex-shrink-0" style="width: 350px;">
-            <div class="card border-0 shadow-sm">
-              <a href="#">
-                <img 
-                  src="https://ngoteyawild.co.tz/wp-content/uploads/2023/11/MAHALE-COVERS-scaled.jpeg" 
-                  alt="Film 2" 
-                  class="carousel-img"
-                />
-              </a>
-            </div>
-          </div>
-  
-          <div class="flex-shrink-0" style="width: 350px;">
-            <div class="card border-0 shadow-sm">
-              <a href="#">
-                <img 
-                  src="https://ngoteyawild.co.tz/wp-content/uploads/2023/11/nyekweri-cover.2jpg-01-min-scaled.jpg" 
-                  alt="Film 3" 
-                  class="carousel-img"
-                />
-              </a>
-            </div>
-          </div>
-  
-          <div class="flex-shrink-0" style="width: 350px;">
-            <div class="card border-0 shadow-sm">
-              <a href="#">
-                <img 
-                  src="https://ngoteyawild.co.tz/wp-content/uploads/2023/11/NEW-MKOMAZI-COVER-01.jpgqq_-scaled.jpg" 
-                  alt="Film 4" 
-                  class="carousel-img"
-                />
-              </a>
-            </div>
+            @endforeach
+           
+           
           </div>
         </div>
       </div>
     </div>
+  </div>
   
-    <!-- Scroll Scripts -->
-    <script>
-      const carousel = document.getElementById('filmsCarousel');
-      document.getElementById('filmsScrollLeft').addEventListener('click', () => {
-        carousel.scrollBy({ left: -350, behavior: 'smooth' });
-      });
-      document.getElementById('filmsScrollRight').addEventListener('click', () => {
-        carousel.scrollBy({ left: 350, behavior: 'smooth' });
-      });
-    </script>
+</div>
+
+
   </section>
   
 
@@ -253,15 +173,14 @@
           <p class="text-muted">We proudly collaborate with organizations worldwide.</p>
         </div>
       </div>
-  
+
+ 
       <!-- Dummy Client Logos Grid -->
       <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 g-4 justify-content-center align-items-center text-center">
-        @foreach ([
-          'client1.webp', 'aml.png', 'crd.png', 'kcb.png', 'taifagas.png', 'equit.png'
-        ] as $image)
+        @foreach ($clients as $client)
           <div class="col">
             <div class=" p-2 d-flex align-items-center justify-content-center" style="width: 100%; height: 120px;">
-              <img src="{{ asset('images/' . $image) }}" alt="Client Logo" class="img-fluid" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+              <img src="{{ asset($client->logo) }}" alt="Client Logo" class="img-fluid" style="max-height: 100%; max-width: 100%; object-fit: contain;">
             </div>
           </div>
         @endforeach
@@ -298,32 +217,5 @@
 @endsection
 
 @section('scripts')
-<!-- JS for Navigation and Scroll Effects -->
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const carousel = document.getElementById("filmsCarousel");
-      const scrollLeftBtn = document.getElementById("filmsScrollLeft");
-      const scrollRightBtn = document.getElementById("filmsScrollRight");
-      const scrollAmount = 350;
-  
-      const items = Array.from(carousel.children);
-  
-      // Repeat original items 4 more times (total 5 loops)
-      for (let i = 0; i < 4; i++) {
-        items.forEach(item => {
-          carousel.appendChild(item.cloneNode(true));
-        });
-      }
-  
-      scrollRightBtn.addEventListener("click", () => {
-        carousel.scrollBy({ left: scrollAmount, behavior: "smooth" });
-      });
-  
-      scrollLeftBtn.addEventListener("click", () => {
-        carousel.scrollBy({ left: -scrollAmount, behavior: "smooth" });
-      });
-    });
-  </script>
-
 
 @endsection

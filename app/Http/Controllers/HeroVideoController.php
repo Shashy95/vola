@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\UploadHelper;
 use App\Models\HeroVideo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -40,22 +41,12 @@ class HeroVideoController extends Controller
     
         if ($request->hasFile('video')) {
             if ($videoPath && file_exists(public_path($videoPath))) {
-                unlink(public_path($videoPath)); // Delete old video manually
+                unlink(public_path($videoPath)); // Delete old video
             }
         
-            $file = $request->file('video');
-            $fileName = uniqid() . '_' . time() . '.' . $file->getClientOriginalExtension();
-            $destinationPath = public_path('hero');
-        
-            // Create the folder if not exists
-            if (!file_exists($destinationPath)) {
-                mkdir($destinationPath, 0755, true);
-            }
-        
-            $file->move($destinationPath, $fileName);
-        
-            $videoPath = 'hero/' . $fileName; // Save relative path into database
+            $videoPath = UploadHelper::uploadPublicFile($request->file('video'), 'hero');
         }
+        
         
     
         // **updateOrCreate**
