@@ -7459,7 +7459,7 @@ header .container-fluid {
     padding-right: 45px;
 }
 header.sticky .navbar-brand {
-    padding: 20px 0;
+    padding: 0px !important;
 }
 header.sticky .navbar {
     -webkit-transform: translateY(-100%);
@@ -7732,7 +7732,7 @@ header .navbar-brand .mobile-logo {
     width: 0;
 }
 header .navbar-brand img {
-    max-height: 100px !important ;
+    max-height: 178px !important ;
 }
 header .header-top-bar {
     position: fixed;

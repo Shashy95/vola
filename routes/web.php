@@ -16,7 +16,7 @@ Route::get('/', function () {
     $video = HeroVideo::first(); 
     $films = Film::all();
     $clients = Client::all(); 
-    $gallery = GalleryImage::all(); 
+    $gallery = GalleryImage::take(12)->get();; 
 
 return view('pages.home', compact('video', 'films', 'clients', 'gallery'));
 })->name('home');
