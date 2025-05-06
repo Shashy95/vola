@@ -6,6 +6,7 @@ use App\Models\Client;
 use App\Models\Film;
 use App\Models\GalleryImage;
 use App\Models\HeroVideo;
+use App\Models\Team;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
@@ -36,6 +37,7 @@ class HomeController extends Controller
             'gallery_items' => GalleryImage::count(),
             'films' => Film::count(),
             'client_logos' => Client::count(),
+            'team_members'=>Team::count()
         ];
 
         $lastUpdates = $this->getLastUpdates();
@@ -54,7 +56,8 @@ class HomeController extends Controller
             'hero' => $this->formatLastUpdate(HeroVideo::max('updated_at')),
             'gallery' => $this->formatLastUpdate(GalleryImage::max('updated_at')),
             'films' => $this->formatLastUpdate(Film::max('updated_at')),
-            'clients' => $this->formatLastUpdate(Client::max('updated_at'))
+            'clients' => $this->formatLastUpdate(Client::max('updated_at')),
+            'teams' => $this->formatLastUpdate(Team::max('updated_at')),
         ];
     }
     

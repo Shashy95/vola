@@ -50,6 +50,15 @@
                           </a>
                       </div>
                   </div>
+                  <!-- Added new row for Teams management -->
+                  <div class="row mt-3">
+                      <div class="col-12 col-sm-6 col-md-3 mb-3">
+                          <a href="{{ route('teams.index') }}" class="btn btn-danger btn-block py-4">
+                              <i class="fa fa-users fa-2x mb-2"></i><br>
+                              Manage Team Members
+                          </a>
+                      </div>
+                  </div>
               </div>
           </div>
       </div>
@@ -130,6 +139,23 @@
                               </div>
                           </div>
                       </div>
+                      <!-- Added Team Members Stat Card -->
+                      <div class="col-12 col-sm-6 mb-3">
+                          <div class="card border-left-danger shadow-sm h-100 py-2">
+                              <div class="card-body">
+                                  <div class="row no-gutters align-items-center">
+                                      <div class="col mr-2">
+                                          <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
+                                              Team Members</div>
+                                          <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $stats['team_members'] }}</div>
+                                      </div>
+                                      <div class="col-auto">
+                                          <i class="fa fa-users fa-2x text-gray-300"></i>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
                   </div>
               </div>
           </div>
@@ -166,6 +192,11 @@
                               <tr>
                                   <td><i class="fa fa-trademark text-warning mr-2"></i> Client Logos</td>
                                   <td>{{ $lastUpdates['clients'] }}</td>
+                              </tr>
+                              <!-- Added Team Members Row -->
+                              <tr>
+                                  <td><i class="fa fa-users text-danger mr-2"></i> Team Members</td>
+                                  <td>{{ $lastUpdates['teams'] }}</td>
                               </tr>
                           </tbody>
                       </table>
@@ -214,6 +245,18 @@
                                       If you have any questions or need assistance, please refer to the documentation.
                                   </p>
                                   <a href="" class="btn btn-sm btn-primary">View Documentation</a>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- Added Team Management Help Card -->
+                      <div class="col-md-4 mb-4">
+                          <div class="card h-100">
+                              <div class="card-body">
+                                  <h5 class="card-title">Team Management</h5>
+                                  <p class="card-text">
+                                      Add, edit, or remove team members from your team showcase section.
+                                  </p>
+                                  <a href="{{ route('teams.index') }}" class="btn btn-sm btn-primary">Learn More</a>
                               </div>
                           </div>
                       </div>
