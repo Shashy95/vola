@@ -5,12 +5,14 @@ use App\Http\Controllers\FilmController;
 use App\Http\Controllers\GalleryImageController;
 use App\Http\Controllers\HeroVideoController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\TeamController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Models\Film;
 use App\Models\Client;
 use App\Models\GalleryImage;
 use App\Models\HeroVideo;
+use App\Models\Team;
 
 Route::get('/', function () {
     $video = HeroVideo::first(); 
@@ -28,6 +30,11 @@ Route::get('/about', function () {
 Route::get('/services', function () {
     return view('pages.services');
 })->name('services');
+
+Route::get('/team', function () {
+    $teams = Team::all(); 
+    return view('pages.team',compact('teams'));
+})->name('team');
 
 Route::get('/contact', function () {
     return view('pages.contact');
@@ -55,6 +62,9 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
     Route::get('/gallery', [GalleryImageController::class, 'index'])->name('gallery.index');
     Route::post('/gallery', [GalleryImageController::class, 'store'])->name('gallery.store');
     Route::delete('/gallery/{id}', [GalleryImageController::class, 'destroy'])->name('gallery.destroy');
+
+    Route::resource('/teams', TeamController::class);
+
 });
 
 

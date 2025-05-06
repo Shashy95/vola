@@ -12,8 +12,12 @@
                         <div class="row h-100">
                             <div class="col-12 p-0">
                             <video autoplay muted loop playsinline class="position-absolute top-0 start-0 w-100 h-100" style="object-fit: cover; display: block;">
-                                  <source src="{{ asset($video->video_path) }}" type="video/mp4">
-                                Your browser does not support the video tag.
+                              @if(isset($video) && $video)
+                              <source src="{{ asset($video->video_path) }}" type="video/mp4">
+                          @else
+                              <!-- Display a message or hide the video element entirely -->
+                              <!-- Or you could use a placeholder image instead -->
+                          @endif
                             </video>
                         </div>
                         </div>
@@ -174,27 +178,30 @@
         </div>
       </div>
 
- 
-      <!-- Dummy Client Logos Grid -->
-      <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 g-4 justify-content-center align-items-center text-center">
-        @foreach ($clients as $client)
-          <div class="col">
-            <div class=" p-2 d-flex align-items-center justify-content-center" style="width: 100%; height: 120px;">
-              <img src="{{ asset($client->logo) }}" alt="Client Logo" class="img-fluid" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+      <div class="row grid-margin">
+        <div class="col-lg-12">
+          <div class="">
+            <div class="">
+              <div class="owl-carousel owl-theme full-width2">
+                @foreach ($clients as $client)
+                <div class="item" style="width: 100%; height: 120px;">
+                    <img 
+                        src="{{ asset($client->logo) ?: asset('images/default-thumbnail.jpg') }}" 
+                        alt="Client Logo" class="img-fluid" style="max-height: 100%; max-width: 100%; object-fit: contain;" />
+               
+                </div>
+                @endforeach
+               
+               
+              </div>
             </div>
           </div>
-        @endforeach
+        </div>
       </div>
       
     </div>
-  </section>
+</section>
   
-  
-
-
-
-
-
 
 <!-- end section -->
 <!-- start section -->

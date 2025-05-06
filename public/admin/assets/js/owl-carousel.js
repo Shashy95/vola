@@ -47,6 +47,30 @@
         navText: ["<i class='ti-angle-left'></i>", "<i class='ti-angle-right'></i>"]
       });
     }
+
+    if ($('.full-width2').length) {
+      const itemCount = $('.owl-carousel .item').length;
+    $('.full-width2').owlCarousel({
+      loop: itemCount >= 4,
+      margin: 20,
+      nav: true,
+      autoplay: true,
+      responsive: {
+          0: {
+            items: 1
+          },
+          600: {
+            items: 2
+          },
+          1000: {
+            items: 4
+          }
+        },
+      autoplayTimeout: 5500,
+      navText: ["<i class='ti-angle-left'></i>", "<i class='ti-angle-right'></i>"]
+    });
+  }
+
   
     if ($('.loop').length) {
       $('.loop').owlCarousel({

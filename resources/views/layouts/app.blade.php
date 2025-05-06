@@ -30,23 +30,30 @@
 
         <style>
 
-                        /* Owl-carousel */
+            /* Owl-carousel */
             .owl-carousel img {
                 border-radius: 4px;
             }
-            .owl-carousel.full-width .owl-nav {
+            .owl-carousel.full-width .owl-nav,
+            .owl-carousel.full-width2 .owl-nav {
                 position: absolute;
                 top: 30%;
                 width: 100%;
                 margin-top: 0;
             }
+
             .owl-carousel.full-width .owl-nav .owl-prev,
-            .owl-carousel.full-width .owl-nav .owl-next {
+            .owl-carousel.full-width2 .owl-nav .owl-prev,
+            .owl-carousel.full-width .owl-nav .owl-next,
+            .owl-carousel.full-width2 .owl-nav .owl-next {
                 background: transparent;
                 color: #ffffff;
             }
+
             .owl-carousel.full-width .owl-nav .owl-prev i:before,
-            .owl-carousel.full-width .owl-nav .owl-next i:before {
+            .owl-carousel.full-width2 .owl-nav .owl-prev i:before,
+            .owl-carousel.full-width .owl-nav .owl-next i:before,
+            .owl-carousel.full-width2 .owl-nav .owl-next i:before {
                 width: 60px;
                 height: 60px;
                 background: rgba(0, 0, 0, 0.5);
@@ -56,15 +63,22 @@
                 line-height: 2;
                 display: block;
             }
-            .owl-carousel.full-width .owl-nav .owl-prev {
+
+            .owl-carousel.full-width .owl-nav .owl-prev,
+            .owl-carousel.full-width2 .owl-nav .owl-prev {
                 float: left;
             }
-            .owl-carousel.full-width .owl-nav .owl-next {
+
+            .owl-carousel.full-width .owl-nav .owl-next,
+            .owl-carousel.full-width2 .owl-nav .owl-next {
                 float: right;
             }
-            .owl-carousel.full-width .owl-dots {
+
+            .owl-carousel.full-width .owl-dots,
+            .owl-carousel.full-width2 .owl-dots {
                 margin-top: 1rem;
             }
+
             .owl-carousel .item-video {
                 width: 200px;
                 height: 200px;

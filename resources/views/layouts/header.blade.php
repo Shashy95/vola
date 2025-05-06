@@ -25,7 +25,7 @@
                             <a href="#" class="nav-link {{ request()->routeIs('services') || request()->routeIs('service-details') ? 'active' : '' }}">Services</a>
                            
                         </li>
-                       
+                        <li class="nav-item"><a href="{{ route('team') }}" class="nav-link {{ request()->routeIs('team') ? 'active' : '' }}">Team</a></li>
                         <li class="nav-item"><a href="{{ route('contact') }}" class="nav-link {{ request()->routeIs('contact') ? 'active' : '' }}">Contact</a></li>
                     </ul>
                 </div>
