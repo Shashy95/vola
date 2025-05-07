@@ -12,12 +12,17 @@
                         <div class="row h-100">
                             <div class="col-12 p-0">
                             <video autoplay muted loop playsinline class="position-absolute top-0 start-0 w-100 h-100" style="object-fit: cover; display: block;">
+<<<<<<< Updated upstream
                               @if(isset($video) && $video)
                               <source src="{{ asset($video->video_path) }}" type="video/mp4">
                           @else
                               <!-- Display a message or hide the video element entirely -->
                               <!-- Or you could use a placeholder image instead -->
                           @endif
+=======
+                                  {{-- <source src="{{ asset($video->video_path) }}" type="video/mp4"> --}}
+                                Your browser does not support the video tag.
+>>>>>>> Stashed changes
                             </video>
                         </div>
                         </div>
