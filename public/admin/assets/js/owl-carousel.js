@@ -26,48 +26,56 @@
     }
   
     if ($('.full-width').length) {
-        const itemCount = $('.owl-carousel .item').length;
+      const itemCount = $('.full-width.owl-carousel .item').length;
+  
       $('.full-width').owlCarousel({
-        loop: itemCount >= 3,
-        margin: 20,
-        nav: true,
-        autoplay: true,
-        responsive: {
-            0: {
-              items: 1
-            },
-            600: {
-              items: 2
-            },
-            1000: {
-              items: 3
-            }
-          },
-        autoplayTimeout: 5500,
-        navText: ["<i class='ti-angle-left'></i>", "<i class='ti-angle-right'></i>"]
+          loop: itemCount > 1, // prevent looping if only 1 item
+          margin: 20,
+          nav: itemCount > 1,
+          autoplay: itemCount > 1,
+          autoplayTimeout: 5500,
+          navText: [
+              "<i class='ti-angle-left'></i>",
+              "<i class='ti-angle-right'></i>"
+          ],
+          responsive: {
+              0: {
+                  items: 1
+              },
+              600: {
+                  items: Math.min(2, itemCount)
+              },
+              1000: {
+                  items: Math.min(3, itemCount)
+              }
+          }
       });
-    }
+  }
+  
 
     if ($('.full-width2').length) {
-      const itemCount = $('.owl-carousel .item').length;
+      const itemCount = $('.full-width2.owl-carousel .item').length;
     $('.full-width2').owlCarousel({
-      loop: itemCount >= 4,
+      loop: itemCount > 1, // prevent looping if only 1 item
       margin: 20,
-      nav: true,
-      autoplay: true,
+      nav: itemCount > 1,
+      autoplay: itemCount > 1,
+      autoplayTimeout: 5500,
+      navText: [
+          "<i class='ti-angle-left'></i>",
+          "<i class='ti-angle-right'></i>"
+      ],
       responsive: {
           0: {
-            items: 1
+              items: 1
           },
           600: {
-            items: 2
+              items: Math.min(2, itemCount)
           },
           1000: {
-            items: 4
+              items: Math.min(3, itemCount)
           }
-        },
-      autoplayTimeout: 5500,
-      navText: ["<i class='ti-angle-left'></i>", "<i class='ti-angle-right'></i>"]
+      }
     });
   }
 
