@@ -68,6 +68,20 @@
     <script src="{{asset('admin/assets/js/jquery.cookie.js')}}" type="text/javascript"></script>
     <script src="{{asset('admin/assets/js/dashboard.js')}}"></script>
     <script src="{{asset('admin/assets/js/data-table.js')}}"></script>
+    <script src="{{asset('admin/assets/vendors/tinymce/tinymce.min.js')}}"></script>
+    <script>
+      if ($("#tinyMceExample").length) {
+        tinymce.init({
+        selector: '#tinyMceExample', // Target textarea with class="tinymce"
+        height: 300,
+        menubar: false,
+        plugins: 'lists',
+        toolbar: 'undo redo | insert | styleselect | formatselect | bold italic underline | alignleft aligncenter alignright | bullist numlist | outdent indent | removeformat',
+        license_key: 'gpl',
+        block_formats: 'Paragraph=p; Heading 1=h1; Heading 2=h2; Heading 3=h3'
+     });
+      }
+    </script>
     <!-- SweetAlert CSS and JS -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 

@@ -34,7 +34,7 @@
 
     <li class="nav-item">
       <a class="nav-link" href="{{ route('teams.index') }}">
-        <i class="icon-grid-2 menu-icon"></i>
+        <i class="icon-head menu-icon"></i>
         <span class="menu-title">Team</span>
       </a>
     </li>

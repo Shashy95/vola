@@ -34,6 +34,12 @@
             </div>
 
             <div class="form-group">
+                <label>Bio</label>
+                <textarea name="bio" id="tinyMceExample" class="form-control" rows="6">{{ old('bio', $team->bio ?? '') }}</textarea>
+            </div>
+
+
+            <div class="form-group">
                 <label for="photo">Photo</label>
                 <input type="file" name="photo" class="form-control @error('photo') is-invalid @enderror" onchange="previewImage(event)">
                 @error('photo')
@@ -75,4 +81,6 @@
         }
     }
 </script>
+
+
 @endsection
