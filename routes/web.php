@@ -40,6 +40,15 @@ Route::get('/contact', function () {
     return view('pages.contact');
 })->name('contact');
 
+Route::get('/gallery', function () {
+    $gallery = GalleryImage::latest()->paginate(9);
+    if (request()->ajax()) {
+        return view('pages.gallery-items', compact('gallery'));
+    }
+    return view('pages.gallery', compact('gallery'));
+})->name('gallery');
+
+
 Auth::routes();
 
 // All admin routes protected by auth middleware
