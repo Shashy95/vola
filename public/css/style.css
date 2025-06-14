@@ -7717,8 +7717,13 @@ header .navbar.mini-header .navbar-brand img {
 header .navbar-brand {
     margin-right: 0;
     vertical-align: middle;
-    display: inline-block;
     font-size: 0;
+
+     display: block;
+  width: 100px; /* fixed width container */
+  height: 75px; /* fixed height container */
+  overflow: hidden;
+  position: relative;
 }
 header .navbar-brand .default-logo {
     visibility: visible;
@@ -7732,7 +7737,15 @@ header .navbar-brand .mobile-logo {
     width: 0;
 }
 header .navbar-brand img {
-    max-height: 178px !important ;
+      position: absolute;
+  top: 50%;
+  left: 50%;
+  max-height: 110px!important;
+  height: auto;
+  width: auto;
+  max-width: none;
+  transform: translate(-50%, -50%) scale(1.2); /* scale image visually */
+  transform-origin: center;
 }
 header .header-top-bar {
     position: fixed;

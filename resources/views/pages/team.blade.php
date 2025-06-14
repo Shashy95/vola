@@ -111,7 +111,7 @@
 @section('content')
 
 <!-- Hero Section -->
-<section class="page-title-big-typography bg-dark-gray ipad-top-space-margin" data-parallax-background-ratio="0.5" style="background-image: url('images/team.jpg'); min-height: 80vh;">
+<section class="page-title-big-typography bg-dark-gray ipad-top-space-margin" data-parallax-background-ratio="0.5" style="background-image: url('images/team.png'); min-height: 80vh;">
     <div class="opacity-extra-medium bg-dark-slate-blue"></div>
     <div class="container h-100">
         <div class="row align-items-center justify-content-center h-100 extra-small-screen">

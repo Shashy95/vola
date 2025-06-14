@@ -99,7 +99,7 @@
 
   <div class="col-md-4 d-flex">
     <div class="bg-white box-shadow-quadruple-large services-box-style-01 hover-box mb-30px border-radius-5px overflow-hidden text-center w-100 d-flex flex-column">
-      <i class="bi bi-camera-reels display-4 text-primary mt-3 d-block mx-auto"></i>
+      <i class="bi bi-camera-reels display-4 text-base-color mt-3 d-block mx-auto"></i>
       <div class="p-10 text-center flex-grow-1">
         <span class="d-inline-block fs-18 alt-font fw-500 text-dark-gray mb-5px">
           Storytelling for Conservation & Communities
@@ -113,7 +113,7 @@
 
   <div class="col-md-4 d-flex">
     <div class="bg-white box-shadow-quadruple-large services-box-style-01 hover-box mb-30px border-radius-5px overflow-hidden text-center w-100 d-flex flex-column">
-      <i class="bi bi-megaphone display-4 text-primary mt-3 d-block mx-auto"></i>
+      <i class="bi bi-megaphone display-4 text-base-color mt-3 d-block mx-auto"></i>
       <div class="p-10 text-center flex-grow-1">
         <span class="d-inline-block fs-18 alt-font fw-500 text-dark-gray mb-5px">
           Media Campaigns & Advocacy
@@ -127,7 +127,7 @@
 
   <div class="col-md-4 d-flex">
     <div class="bg-white box-shadow-quadruple-large services-box-style-01 hover-box mb-30px border-radius-5px overflow-hidden text-center w-100 d-flex flex-column">
-      <i class="bi bi-people-fill display-4 text-primary mt-3 d-block mx-auto"></i>
+      <i class="bi bi-people-fill display-4 text-base-color mt-3 d-block mx-auto"></i>
       <div class="p-10 text-center flex-grow-1">
         <span class="d-inline-block fs-18 alt-font fw-500 text-dark-gray mb-5px">
           Public Relations & Communication Strategy
@@ -141,7 +141,7 @@
 
   <div class="col-md-4 d-flex">
     <div class="bg-white box-shadow-quadruple-large services-box-style-01 hover-box mb-30px border-radius-5px overflow-hidden text-center w-100 d-flex flex-column">
-      <i class="bi bi-camera-video-fill display-4 text-primary mt-3 d-block mx-auto"></i>
+      <i class="bi bi-camera-video-fill display-4 text-base-color mt-3 d-block mx-auto"></i>
       <div class="p-10 text-center flex-grow-1">
         <span class="d-inline-block fs-18 alt-font fw-500 text-dark-gray mb-5px">
           Creative Production
@@ -155,7 +155,7 @@
 
   <div class="col-md-4 d-flex">
     <div class="bg-white box-shadow-quadruple-large services-box-style-01 hover-box mb-30px border-radius-5px overflow-hidden text-center w-100 d-flex flex-column">
-      <i class="bi bi-globe2 display-4 text-primary mt-3 d-block mx-auto"></i>
+      <i class="bi bi-globe2 display-4 text-base-color mt-3 d-block mx-auto"></i>
       <div class="p-10 text-center flex-grow-1">
         <span class="d-inline-block fs-18 alt-font fw-500 text-dark-gray mb-5px">
           Digital & Social Media Management
@@ -169,7 +169,7 @@
 
   <div class="col-md-4 d-flex">
     <div class="bg-white box-shadow-quadruple-large services-box-style-01 hover-box mb-30px border-radius-5px overflow-hidden text-center w-100 d-flex flex-column">
-      <i class="bi bi-journal-richtext display-4 text-primary mt-3 d-block mx-auto"></i>
+      <i class="bi bi-journal-richtext display-4 text-base-color mt-3 d-block mx-auto"></i>
       <div class="p-10 text-center flex-grow-1">
         <span class="d-inline-block fs-18 alt-font fw-500 text-dark-gray mb-5px">
           Training & Capacity Building
@@ -183,7 +183,7 @@
 
   <div class="col-md-4 d-flex">
     <div class="bg-white box-shadow-quadruple-large services-box-style-01 hover-box mb-30px border-radius-5px overflow-hidden text-center w-100 d-flex flex-column">
-      <i class="bi bi-briefcase-fill display-4 text-primary mt-3 d-block mx-auto"></i>
+      <i class="bi bi-briefcase-fill display-4 text-base-color mt-3 d-block mx-auto"></i>
       <div class="p-10 text-center flex-grow-1">
         <span class="d-inline-block fs-18 alt-font fw-500 text-dark-gray mb-5px">
           Media Consultancy for Development Projects

@@ -1,5 +1,20 @@
 @extends('layouts.app')
 
+@section('styles')
+<style>
+  /* Large devices (lg and up) prevent wrapping */
+  @media (min-width: 768px) {
+    .no-wrap-lg {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+ 
+</style>
+@endsection
+
 @section('content')
 <section class="section-dark p-0 bg-dark-gray">
     <div class="swiper lg-no-parallax magic-cursor full-screen md-h-600px sm-h-500px ipad-top-space-margin swiper-light-pagination">
@@ -40,53 +55,19 @@
 <section class="border-bottom main-section pt-40px pb-40px overflow-hidden">
     <div class="container">
         <div class="row row-cols-1 row-cols-lg-4 row-cols-sm-2 justify-content-center align-items-center" data-anime='{ "el": "childs", "translateX": [-15, 0], "translateY": [15, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
+
             <!-- start features box item -->
-            <div class="col icon-with-text-style-08 md-mb-30px text-center text-sm-start">
-                <div class="feature-box feature-box-left-icon-middle d-inline-flex align-middle">
-                    <div class="feature-box-icon me-10px">
-                        <i class="bi bi-shield-check icon-very-medium text-base-color"></i>
-                    </div>
-                    <div class="feature-box-content">
-                        <span class="alt-font fw-500 text-dark-gray d-block lh-26">World-class services</span>
-                    </div>
-                </div>
+          <div class="col-auto icon-with-text-style-08 text-center text-sm-start">
+            <div class="feature-box d-flex align-items-center">
+              <div class="feature-box-content">
+            <span class="no-wrap-lg d-inline-block text-lg-nowrap" style="">
+              We are inspired by nature conservation and telling African stories
+            </span>
+                  </div>
+              </div>
             </div>
-            <!-- end features box item -->
-            <!-- start features box item -->
-            <div class="col icon-with-text-style-08 md-mb-30px text-center text-sm-start">
-                <div class="feature-box feature-box-left-icon-middle d-inline-flex align-middle">
-                    <div class="feature-box-icon me-10px">
-                        <i class="bi bi-hourglass icon-very-medium text-base-color"></i>
-                    </div>
-                    <div class="feature-box-content">
-                        <span class="alt-font fw-500 text-dark-gray d-block lh-26">Experience strategy</span>
-                    </div>
-                </div>
-            </div>
-            <!-- end features box item -->
-            <!-- start features box item -->
-            <div class="col icon-with-text-style-08 xs-mb-30px text-center text-sm-start">
-                <div class="feature-box feature-box-left-icon-middle d-inline-flex align-middle">
-                    <div class="feature-box-icon me-10px">
-                        <i class="bi bi-award icon-very-medium text-base-color"></i>
-                    </div>
-                    <div class="feature-box-content">
-                        <span class="alt-font fw-500 text-dark-gray d-block lh-26">Award winning agency</span>
-                    </div>
-                </div>
-            </div>
-            <!-- end features box item -->
-            <!-- start features box item -->
-            <div class="col icon-with-text-style-08 text-center text-sm-start">
-                <div class="feature-box feature-box-left-icon-middle d-inline-flex align-middle">
-                    <div class="feature-box-icon me-10px">
-                        <i class="bi bi-briefcase icon-very-medium text-base-color"></i>
-                    </div>
-                    <div class="feature-box-content">
-                        <span class="alt-font fw-500 text-dark-gray d-block lh-26">Grow your business</span>
-                    </div>
-                </div>
-            </div>
+
+
             <!-- end features box item -->
         </div>
     </div>
@@ -157,6 +138,14 @@
           <img src="{{ asset($image->image_path) }}" class="img-fluid rounded-3 shadow-sm w-100 equal-image" alt="Image 1" style="height: 250px; object-fit: cover;">
         </div>
         @endforeach
+
+         <!-- View More Button -->
+        <div class="row mt-4">
+        <div class="col text-center">
+        <a href="{{ route('gallery') }}" class="btn btn-outline-dark px-4 py-2 rounded-pill" style="border-color: #10322c; color: #10322c;">
+          View More
+        </a>
+      </div>
         
       </div>
     </div>

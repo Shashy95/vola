@@ -275,7 +275,7 @@
 @endsection
 
 @section('content')
-<section class="page-title-big-typography bg-dark-gray ipad-top-space-margin" data-parallax-background-ratio="0.5" style="background-image: url('images/gallery-hero.jpg')">
+<section class="page-title-big-typography bg-dark-gray ipad-top-space-margin" data-parallax-background-ratio="0.5" style="background-image: url('images/gallery.png')">
     <div class="opacity-extra-medium bg-dark-slate-blue"></div>
     <div class="container">
         <div class="row align-items-center justify-content-center extra-small-screen">

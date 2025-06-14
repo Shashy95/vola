@@ -1,5 +1,19 @@
 @extends('layouts.app')
 
+@section('styles')
+<style>
+  /* Ensure no break within the links container */
+  .nowrap-label {
+    white-space: nowrap;
+  }
+  .nowrap-links {
+    white-space: nowrap;
+    display: inline-flex;
+    gap: 8px;
+  }
+</style>
+@endsection
+
 @section('content')
 <section class="page-title-big-typography bg-dark-gray ipad-top-space-margin" data-parallax-background-ratio="0.5" style="background-image: url('images/contact.jpg')">
     <div class="opacity-extra-medium bg-dark-slate-blue"></div>
@@ -24,17 +38,42 @@
     <div class="container"> 
         <div class="row g-0 justify-content-center">
             
-            <div class="col-lg-5 col-md-6" data-anime='{ "translateX": [15, 0], "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 300, "easing": "easeOutQuad" }' >
-                <div class="bg-base-color p-18 lg-p-15 h-100" style="background-color: #10322c;"> 
-                    <span class="text-white text-decoration-line-bottom mb-10px d-inline-block">Keep in touch?</span>
-                    <p class="text-white opacity-5">401 Broadway, 24th Floor, Orchard View, London</p>
-                    <span class="text-white text-decoration-line-bottom mb-10px d-inline-block">Toll free customer care?</span>
-                    <p><a href="tel:1800222000" class="text-white opacity-5">1-800-222-000</a><br><a href="tel:1800222002" class="text-white opacity-5">1-800-222-002</a></p>
-                    <span class="text-white text-decoration-line-bottom mb-10px d-inline-block">Need live support?</span>
-                    <a href="mailto:info@yourdomain.com" class="text-white opacity-5 d-block">info@yourdomain.com</a>
-                    <a href="mailto:help@yourdomain.com" class="text-white opacity-5 d-block">help@yourdomain.com</a>  
-                </div>
-            </div>
+            <div class="col-lg-5 col-md-6" data-anime='{ "translateX": [15, 0], "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 300, "easing": "easeOutQuad" }'>
+    <div class="bg-base-color p-18 lg-p-15 h-100" style="background-color: #10322c;"> 
+        <span class="text-white text-decoration-line-bottom mb-10px d-inline-block">VOLA’s House</span>
+        <p class="text-white opacity-5">VOLA House, Dar-View Street, Ilala Region, Dar es Salaam</p>
+
+        <span class="text-white text-decoration-line-bottom mb-10px d-inline-block">Stay connected with VOLA</span>
+        <p>
+            <a href="tel:+255689748534" class="text-white opacity-5 d-block">+255 689 748 534</a>
+            <a href="tel:+255682901391" class="text-white opacity-5 d-block">+255 682 901 391</a>
+        </p>
+
+        <span class="text-white text-decoration-line-bottom mb-10px d-inline-block">Email us</span>
+        <a href="mailto:slihedule@volaafrica.com" class="text-white opacity-5 d-block">slihedule@volaafrica.com</a>
+
+        <span class="text-white text-decoration-line-bottom mb-10px d-inline-block">Follow us</span>
+        <div class="text-white opacity-5">
+           <div class="d-flex justify-content-start" style="gap: 12px; align-items: center;">
+  <span class="nowrap-label">Instagram:</span>
+  <span class="nowrap-links">
+    <a href="https://instagram.com/volaafrica" target="_blank" class="text-white" style="color: white; ">volaafrica</a> and 
+    <a href="https://instagram.com/steve_wildfilms" target="_blank" class="text-white" style="color: white; ">steve_wildfilms</a>
+  </span>
+</div>
+    <div class="d-flex justify-content-start">
+        <span class="nowrap-label">X (Twitter):</span>
+        <a href="https://x.com/volafrica" target="_blank" class="text-white" style="color: white; ">volafrica</a>
+    </div>
+    <div class="d-flex justify-content-start">
+        <span class="nowrap-label">TikTok: </span>
+        <a href="https://tiktok.com/@volaafrica" target="_blank" class="text-white" style="color: white; ">volaafrica</a>
+    </div>
+</div>
+
+    </div>
+</div>
+
             <div class="col-lg-5 offset-lg-1">  
                 <div class="pt-5 md-pt-45px contact-form-style-01" data-anime='{ "translateX": [0, 0], "opacity": [0,1], "duration": 600, "delay": 300, "staggervalue": 300, "easing": "easeOutQuad" }'>
                     <h4 class="d-inline-block alt-font fw-600 text-dark-gray ls-minus-1px mb-30px">Feel free to reach via contact us form.</h4>
@@ -70,15 +109,16 @@
             <div class="col-12 p-0">
                 <div class="ratio ratio-21x9 rounded overflow-hidden shadow-lg">
                     <!-- Replace with your actual Google Maps embed code -->
-                    <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126343.24848701756!2d39.17893628053022!3d-6.792354435233763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185c4c9a3bbd6607%3A0x49d90e60dbf85b8a!2sDar%20es%20Salaam!5e0!3m2!1sen!2stz!4v1713700000000!5m2!1sen!2stz" 
-                    width="600" 
-                    height="450" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
-                  </iframe>
+                <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.622852006649!2d39.27638201534828!3d-6.800372995030105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185c4c8f54c4a9d1%3A0x151e8f54f0eaa1a2!2sIlala%20Municipal%20Council%2C%20Dar%20es%20Salaam!5e0!3m2!1sen!2stz!4v1713700000000!5m2!1sen!2stz" 
+                width="600" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+
                     
                 </div>
             </div>
